@@ -43,7 +43,7 @@ GitHub Pagesで `main` ブランチのルートから公開しています。
 - `assets/styles.css`：共通デザイン
 - `assets/site.js`：カテゴリ絞り込み・画面デモ
 - `assets/favicon.svg`：サンプルブックのアイコン
-- `assets/524-line-products/`：524のキャラクター画像とLINE STOREの商品画像
+- `assets/524-line-products/`：524のキャラクター画像と、作者の入稿・制作素材から用意した商品一覧の画像
 - `assets/524-line-preview/`：送信プレビューに使う各作品の絵柄
 - `assets/524-fonts/`：524ページのWebフォントとライセンス
 - `assets/restaurant/`：飲食グループの料理写真

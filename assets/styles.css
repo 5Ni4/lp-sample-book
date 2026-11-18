@@ -597,6 +597,8 @@ a.dining-link:hover, .dining-brand a:hover .dining-link { color: var(--accent); 
 }
 .stamp-product:nth-child(even) .stamp-product__art { background: #fff4cb; }
 .stamp-product img { display: block; width: min(78%, 195px); height: auto; }
+.stamp-product__mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(78%, 195px); aspect-ratio: 1; }
+.stamp-product__mosaic img { width: 100%; }
 .stamp-product__body { padding: clamp(12px, 2vw, 21px); }
 .stamp-product h3 { margin: 0; font-size: clamp(14px, 1.7vw, 18px); line-height: 1.5; overflow-wrap: anywhere; text-wrap: balance; }
 .stamp-about { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 14px 38px; }
