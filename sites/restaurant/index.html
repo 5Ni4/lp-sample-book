@@ -3,104 +3,176 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="複数の飲食ブランドと店舗を運営する架空の会社を題材にした、飲食グループの会社案内LPサンプル。">
-  <title>街の食卓グループ｜複数ブランド・店舗のLPサンプル</title>
+  <meta name="description" content="食堂・麺処・酒場の3ブランド、6店舗を営む架空の飲食グループ。各店の料理、営業時間、エリアを案内します。">
+  <title>街の食卓グループ｜食堂・麺処・酒場</title>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/styles.css">
   <script src="../../assets/site.js" defer></script>
 </head>
 <body class="sample-page theme--restaurant">
   <a class="skip-link" href="#main">本文へ移動</a>
-  <div class="demo-strip"><span>LP SAMPLE</span><span>架空の飲食会社・ブランド・店舗情報を使った試作品です</span></div>
-  <header class="site-header">
-    <a class="brand" href="../../index.html" aria-label="LPサンプルブックへ戻る"><span class="brand__mark">街</span><span class="brand__word">街の食卓グループ<small>MACHI NO SHOKUTAKU</small></span></a>
-    <nav class="main-nav" aria-label="メインナビゲーション"><a href="#business">事業紹介</a><a href="#brands">運営ブランド</a><a href="#stores">店舗一覧</a><a href="#about">会社案内</a><a class="button button--small" href="#stores">運営店舗を見る</a></nav>
+  <div class="demo-strip">
+    <span>LP SAMPLE</span>
+    <span>架空の飲食グループのサイト見本です。料理写真は生成画像です。</span>
+  </div>
+  <header class="site-header dining-header">
+    <a class="brand" href="#main">
+      <span class="brand__mark" aria-hidden="true">街</span>
+      <span class="brand__word">街の食卓グループ</span>
+    </a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="#about">私たちについて</a>
+      <a href="#brands">お店の紹介</a>
+      <a href="#news">お知らせ</a>
+      <a class="button button--small" href="#stores">店舗一覧</a>
+    </nav>
   </header>
+
   <main id="main">
-    <section class="site-hero page-wrap">
-      <div class="site-hero__copy">
-        <p class="eyebrow"><span class="eyebrow__line"></span> FOOD BUSINESS GROUP</p>
-        <h1>食の場を、街に。<br><em>ブランドと店舗を育てる。</em></h1>
-        <p class="lead">食堂・麺処・酒場。複数のブランドと店舗を運営する架空の飲食会社を題材に、事業・ブランド・各店の情報をまとめて紹介します。</p>
-        <div class="hero-actions"><a class="button" href="#brands">運営ブランドを見る <span aria-hidden="true">↓</span></a><a class="back-link" href="../../index.html">← サンプル一覧へ戻る</a></div>
-        <div class="hero-meta"><span>3ブランドの運営想定</span><span>6店舗の案内</span><span>会社と店舗情報を集約</span></div>
+    <section class="dining-hero page-wrap" aria-labelledby="dining-title">
+      <div class="dining-hero__intro">
+        <h1 id="dining-title"><span>昼の定食、</span><span>だしの一杯、</span><span>炭火の夜。</span></h1>
+        <div>
+          <p>街の食卓グループは、食堂・麺処・酒場を合わせて6店舗営んでいます。</p>
+          <a class="dining-link" href="#brands">お店を選ぶ <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
-      <div class="site-hero__visual">
-        <svg class="hero-art" viewBox="0 0 440 390" role="img" aria-label="街に並ぶ複数の飲食店舗を描いたイラスト">
-          <ellipse cx="221" cy="337" rx="175" ry="23" fill="#82654d" opacity=".14"/>
-          <path d="M45 279c67-35 111-26 169 2 53 25 105 28 181-10v67H45z" fill="#e9d8c5"/>
-          <path d="M42 272c73-44 131-46 191-12 63 35 108 28 170-10" fill="none" stroke="#cba988" stroke-width="8" stroke-linecap="round"/>
-          <g transform="translate(56 115)"><rect x="0" y="74" width="92" height="125" rx="4" fill="#f7efe4"/><path d="M-8 82 46 28l55 54z" fill="#b96e4b"/><rect x="13" y="101" width="29" height="40" rx="3" fill="#b8d0c6"/><rect x="50" y="101" width="28" height="40" rx="3" fill="#d9b48b"/><rect x="34" y="151" width="25" height="48" rx="3" fill="#72513f"/><path d="M0 82h92" stroke="#fff8ec" stroke-width="7"/></g>
-          <g transform="translate(178 88)"><rect x="0" y="90" width="104" height="141" rx="4" fill="#fbf3e8"/><path d="M-9 99 51 34l63 65z" fill="#a75c3e"/><rect x="13" y="121" width="31" height="44" rx="3" fill="#c4d8cf"/><rect x="58" y="121" width="31" height="44" rx="3" fill="#d7b891"/><rect x="38" y="177" width="29" height="54" rx="3" fill="#72513f"/><path d="M0 99h104" stroke="#fff8ec" stroke-width="8"/></g>
-          <g transform="translate(316 135)"><rect x="0" y="65" width="79" height="113" rx="4" fill="#f7efe4"/><path d="M-8 73 39 24l49 49z" fill="#c58755"/><rect x="10" y="91" width="26" height="35" rx="3" fill="#c4d8cf"/><rect x="44" y="91" width="24" height="35" rx="3" fill="#d9b48b"/><rect x="28" y="137" width="23" height="41" rx="3" fill="#72513f"/><path d="M0 73h79" stroke="#fff8ec" stroke-width="7"/></g>
-          <circle cx="100" cy="95" r="17" fill="#f3d882"/><circle cx="337" cy="92" r="10" fill="#91a781"/><path d="M92 93h16M100 85v16" stroke="#fff8e8" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <span class="hero-stamp">3ブランド<br>6店舗</span>
+      <img class="dining-hero__photo" src="../../assets/restaurant/group-table.jpg" width="1536" height="508" alt="木の食卓に並んだ焼き魚定食、だし麺、炭火焼き" fetchpriority="high">
+    </section>
+
+    <section id="about" class="page-wrap dining-section dining-about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">私たちについて</p>
+        <h2 id="about-title">季節の食材を、<br>店ごとの味で。</h2>
+      </div>
+      <div class="dining-about__text">
+        <p>食堂では、焼き魚の定食に季節の小鉢を。麺処では、澄んだだしに、その時季の野菜を。酒場では、鶏串と一緒に旬の野菜も炭火で焼きます。</p>
+        <p>ひとりのお昼にも、仲間と囲む夕食にも。いつもの街で、今日の気分に合う店を見つけてください。</p>
       </div>
     </section>
 
-    <section id="business" class="section section--compact section--tint">
+    <section id="brands" class="dining-section dining-section--tint" aria-labelledby="brands-title">
       <div class="page-wrap">
-        <div class="section-intro"><p class="eyebrow">OUR BUSINESS</p><h2>ブランドを育て、<br>複数の店舗を運営。</h2><p>飲食会社の事業全体から各ブランド、各店舗へと情報をたどれる構成です。</p></div>
-        <div class="feature-grid">
-          <article class="feature-card"><span>01</span><h3>飲食ブランドの企画</h3><p>食堂・麺処・酒場など、食の楽しみ方に合わせてブランドを展開します。</p></article>
-          <article class="feature-card"><span>02</span><h3>多店舗の運営</h3><p>全店舗の情報を集約しながら、営業時間やお知らせは店ごとに案内します。</p></article>
-          <article class="feature-card"><span>03</span><h3>地域に合わせた出店</h3><p>街や立地に合わせた店づくりと、各エリアの店舗案内を紹介します。</p></article>
+        <header class="dining-section__head">
+          <h2 id="brands-title">お店の紹介</h2>
+          <a class="dining-link" href="#stores">全6店舗を見る <span aria-hidden="true">↓</span></a>
+        </header>
+        <div class="dining-brands">
+          <article class="dining-brand">
+            <a href="#stores-koyori">
+              <img src="../../assets/restaurant/koyori-meal.jpg" width="506" height="506" loading="lazy" alt="焼き魚、ごはん、汁物、季節の小鉢が並ぶ定食">
+              <div class="dining-brand__copy">
+                <p class="dining-brand__kind">定食と季節の小鉢</p>
+                <h3>ごはん処 こより</h3>
+                <p>焼き魚と炊きたてのごはん。小鉢は季節の野菜で仕立てます。</p>
+                <span class="dining-link">こよりの3店舗 <span aria-hidden="true">↓</span></span>
+              </div>
+            </a>
+          </article>
+          <article class="dining-brand">
+            <a href="#stores-minamo">
+              <img src="../../assets/restaurant/minamo-noodles.jpg" width="506" height="506" loading="lazy" alt="澄んだだしと野菜を添えた温かい麺">
+              <div class="dining-brand__copy">
+                <p class="dining-brand__kind">だし麺</p>
+                <h3>麺処 みなも</h3>
+                <p>だしの香りを楽しむ一杯。季節の野菜を添えてお出しします。</p>
+                <span class="dining-link">みなもの2店舗 <span aria-hidden="true">↓</span></span>
+              </div>
+            </a>
+          </article>
+          <article class="dining-brand">
+            <a href="#stores-tsumugi">
+              <img src="../../assets/restaurant/tsumugi-grill.jpg" width="506" height="506" loading="lazy" alt="炭火で焼いた鶏串と野菜を盛った皿">
+              <div class="dining-brand__copy">
+                <p class="dining-brand__kind">炭火焼きと酒</p>
+                <h3>炭火酒場 つむぎ</h3>
+                <p>香ばしい鶏串と焼き野菜。小皿をつまみながら、ゆっくり飲める酒場です。</p>
+                <span class="dining-link">つむぎの店舗 <span aria-hidden="true">↓</span></span>
+              </div>
+            </a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="brands" class="section section--compact page-wrap">
-      <div class="section-intro"><p class="eyebrow">OUR BRANDS</p><h2>街に合わせた、<br>3つの飲食ブランド。</h2><p>ブランド名・内容・店舗数は、複数店舗運営の見せ方を示す架空のサンプルです。</p></div>
-      <div class="store-grid">
-        <article class="branch-card"><div class="branch-card__top"><span>01 / DINING</span><span>3店舗</span></div><h3>ごはん処 こより</h3><p>毎日の食卓に寄り添う、定食と季節のおかず。</p><div class="branch-card__meta">中央通り店・駅前店・公園前店（サンプル）</div></article>
-        <article class="branch-card"><div class="branch-card__top"><span>02 / NOODLES</span><span>2店舗</span></div><h3>麺処 みなも</h3><p>出汁の香りを楽しむ、気軽な街の麺処。</p><div class="branch-card__meta">東口店・南町店（サンプル）</div></article>
-        <article class="branch-card"><div class="branch-card__top"><span>03 / IZAKAYA</span><span>1店舗</span></div><h3>炭火酒場 つむぎ</h3><p>炭火料理と季節の一品を囲む、街の酒場。</p><div class="branch-card__meta">西口店（サンプル）</div></article>
+    <section id="stores" class="page-wrap dining-section" aria-labelledby="stores-title">
+      <header class="dining-section__head">
+        <h2 id="stores-title">店舗一覧</h2>
+        <p>店名・エリア・営業時間はサンプルです。</p>
+      </header>
+      <div class="dining-store-groups">
+        <section id="stores-koyori" class="dining-store-group" aria-labelledby="koyori-title">
+          <h3 id="koyori-title">ごはん処 こより <small>3店舗</small></h3>
+          <ul class="dining-store-list">
+            <li><strong>中央通り店</strong><span>中央エリア</span><span class="dining-hours">11:00–21:00</span></li>
+            <li><strong>駅前店</strong><span>駅前エリア</span><span class="dining-hours">10:30–20:30</span></li>
+            <li><strong>公園前店</strong><span>公園エリア</span><span class="dining-hours">11:00–19:30</span></li>
+          </ul>
+        </section>
+        <section id="stores-minamo" class="dining-store-group" aria-labelledby="minamo-title">
+          <h3 id="minamo-title">麺処 みなも <small>2店舗</small></h3>
+          <ul class="dining-store-list">
+            <li><strong>東口店</strong><span>東口エリア</span><span class="dining-hours">11:00–22:00</span></li>
+            <li><strong>南町店</strong><span>南町エリア</span><span class="dining-hours">11:30–20:30</span></li>
+          </ul>
+        </section>
+        <section id="stores-tsumugi" class="dining-store-group" aria-labelledby="tsumugi-title">
+          <h3 id="tsumugi-title">炭火酒場 つむぎ <small>1店舗</small></h3>
+          <ul class="dining-store-list">
+            <li><strong>西口店</strong><span>西口エリア</span><span class="dining-hours">16:00–23:00</span></li>
+          </ul>
+        </section>
       </div>
     </section>
 
-    <section id="stores" class="section section--compact section--tint">
-      <div class="page-wrap">
-        <div class="section-intro"><p class="eyebrow">OUR LOCATIONS</p><h2>運営する6店舗。</h2><p>ブランドごとの店舗名・エリア・営業時間はサンプルです。実店舗の所在地ではありません。</p></div>
-        <div class="store-grid">
-          <article class="branch-card"><div class="branch-card__top"><span>こより / DINING</span><span>中央エリア</span></div><h3>中央通り店</h3><p>街の中心で、昼も夜も気軽な定食を。</p><div class="branch-card__meta">営業時間 11:00–21:00（サンプル）</div></article>
-          <article class="branch-card"><div class="branch-card__top"><span>こより / DINING</span><span>駅前エリア</span></div><h3>駅前店</h3><p>通勤やお出かけの帰りに立ち寄れる店舗。</p><div class="branch-card__meta">営業時間 10:30–20:30（サンプル）</div></article>
-          <article class="branch-card"><div class="branch-card__top"><span>こより / DINING</span><span>公園エリア</span></div><h3>公園前店</h3><p>散歩のあとに、ゆっくり食事を楽しめます。</p><div class="branch-card__meta">営業時間 11:00–19:30（サンプル）</div></article>
-          <article class="branch-card"><div class="branch-card__top"><span>みなも / NOODLES</span><span>東口エリア</span></div><h3>東口店</h3><p>駅の東側で、出汁のきいた一杯を。</p><div class="branch-card__meta">営業時間 11:00–22:00（サンプル）</div></article>
-          <article class="branch-card"><div class="branch-card__top"><span>みなも / NOODLES</span><span>南町エリア</span></div><h3>南町店</h3><p>買い物の途中にも立ち寄りやすい麺処。</p><div class="branch-card__meta">営業時間 11:30–20:30（サンプル）</div></article>
-          <article class="branch-card"><div class="branch-card__top"><span>つむぎ / IZAKAYA</span><span>西口エリア</span></div><h3>西口店</h3><p>仕事帰りに炭火料理を楽しめる酒場。</p><div class="branch-card__meta">営業時間 16:00–23:00（サンプル）</div></article>
+    <section id="news" class="dining-section dining-section--tint" aria-labelledby="news-title">
+      <div class="page-wrap dining-news">
+        <header class="dining-section__head">
+          <h2 id="news-title">お知らせ</h2>
+          <p>掲載内容はサンプルです。</p>
+        </header>
+        <div class="dining-news__list">
+          <details>
+            <summary><span>ごはん処 こより</span><strong>焼き魚の定食に、かぼちゃの煮物を添えます</strong></summary>
+            <p>こよりの3店舗で、焼き魚の定食にかぼちゃの煮物をお付けします。</p>
+          </details>
+          <details>
+            <summary><span>麺処 みなも</span><strong>温かいだし麺に、季節の野菜を</strong></summary>
+            <p>東口店と南町店で、だし麺に季節の青菜を添えてお出しします。</p>
+          </details>
+          <details>
+            <summary><span>炭火酒場 つむぎ</span><strong>炭火焼きに、しいたけとししとうが加わりました</strong></summary>
+            <p>西口店で、香ばしく焼き上げる野菜の小皿をご用意しています。</p>
+          </details>
         </div>
-        <div class="location-visual" style="margin-top:18px">
-          <svg viewBox="0 0 800 280" role="img" aria-label="架空の6店舗の位置関係を表すサンプル地図">
-            <rect width="800" height="280" rx="8" fill="#f7f3e8"/>
-            <path d="M-20 217 820 52M-20 78 820 222M165-20l115 330M560-20 445 310" fill="none" stroke="#e0d4bd" stroke-width="22"/>
-            <path d="M-20 217 820 52M-20 78 820 222M165-20l115 330M560-20 445 310" fill="none" stroke="#fffaf1" stroke-width="13"/>
-            <path d="M75 37h93v37H75zM648 188h89v40h-89zM338 26h69v31h-69zM334 218h110v35H334z" fill="#dfe8d8"/>
-            <g fill="#a55437" stroke="#fffaf1" stroke-width="7"><circle cx="145" cy="132" r="22"/><circle cx="265" cy="183" r="22"/><circle cx="365" cy="83" r="22"/><circle cx="475" cy="174" r="22"/><circle cx="582" cy="102" r="22"/><circle cx="690" cy="205" r="22"/></g>
-            <g fill="#fffaf1" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle"><text x="145" y="136">1</text><text x="265" y="187">2</text><text x="365" y="87">3</text><text x="475" y="178">4</text><text x="582" y="106">5</text><text x="690" y="209">6</text></g>
-            <g fill="#64705f" font-family="sans-serif" font-size="11"><text x="83" y="31">広場</text><text x="664" y="181">公園</text></g>
-          </svg>
-          <p class="sample-small">店舗数と広がりを表すイメージ図です。実際の地図や所在地とは異なります。</p>
+      </div>
+    </section>
+
+    <aside class="page-wrap dining-demo" aria-label="サンプルサイトの運用デモ">
+      <details data-workflow-demo>
+        <summary>お知らせの下書きデモを見る</summary>
+        <div class="dining-demo__body">
+          <p>記事作成ボタンは固定文を表示します。MCP・AI・CMSには接続せず、送信や保存は行いません。</p>
+          <div class="screen-actions">
+            <button class="demo-button" type="button" data-article-demo>記事の下書きを表示</button>
+            <span class="demo-status" data-demo-status role="status"></span>
+          </div>
+          <article class="generated-preview" data-generated-preview hidden>
+            <span>下書き例</span>
+            <h3>焼き魚の定食に、かぼちゃの煮物を添えます</h3>
+            <p>ごはん処 こよりの3店舗で、季節の小鉢としてかぼちゃの煮物をご用意します。</p>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="section section--compact page-wrap">
-      <div class="story-split"><div class="story-mark"><div class="story-mark__inner">MACHI<br>NO SHOKUTAKU</div></div><div class="story-copy"><p class="eyebrow">ABOUT THE GROUP</p><h2>街の食事の場を、<br>次の店舗へ。</h2><p>街の食卓グループは、複数の飲食ブランドと店舗を企画・運営する架空の会社です。会社としての事業全体、ブランドごとの個性、各店の情報をひとつのサイトで見渡せる構成を紹介します。</p><p>運営店舗が増えても、ブランド単位・店舗単位で情報を整理し、更新しやすい仕組みを設計できます。</p></div></div>
-    </section>
-
-    <section class="section section--compact section--tint page-wrap" data-workflow-demo>
-      <div class="section-intro"><p class="eyebrow">CONTENT OPERATIONS / DEMO</p><h2>全店舗のお知らせを、<br>公開前に確認。</h2><p>複数店舗を運営する本部のお知らせづくりを想定した画面イメージです。記事作成ボタンは固定文を表示します。</p></div>
-      <div class="operation-demo">
-        <div class="operation-info"><h3>新メニューを<br>店舗別に案内する例</h3><p>運営本部で情報を整理し、ブランドや対象店舗ごとに掲載内容を確認する想定です。</p><ul><li>お知らせ：新メニュー</li><li>掲載先：ブランド・店舗別</li><li>確認：掲載前に担当者が確認</li></ul></div>
-        <div class="operation-screen"><div class="screen-head"><b>記事作成フローのプロトタイプ</b><span>FIXED SAMPLE</span></div><div class="screen-content"><div class="screen-form"><div class="screen-field"><label>記事の種類</label><div class="screen-value">メニューのお知らせ</div></div><div class="screen-field"><label>掲載先</label><div class="screen-value">ブランド・対象店舗を選択</div></div><div class="screen-field screen-field--wide"><label>素材から下書きを作る</label><div class="screen-value">ブランド名・提供期間・対象店舗を整理</div></div></div><div class="screen-actions"><button class="demo-button" type="button" data-article-demo>記事の下書きを表示</button><span class="demo-status" data-demo-status aria-live="polite">まだ表示していません</span></div><article class="generated-preview" data-generated-preview hidden><span>下書き例 / 公開前に人が確認</span><h4>季節の定食を各店舗でご用意しています</h4><p>ごはん処 こよりの各店舗で、季節の野菜と焼き魚を組み合わせた定食をご用意しています。提供期間や内容は店舗によって異なる場合があります。ご来店前に店舗情報をご確認ください。</p></article><p class="workflow-disclosure">固定の文章を表示する画面デモです。MCP・AI・CMSには接続せず、入力内容も送信・保存しません。</p></div></div>
-      </div>
-    </section>
-
-    <section class="section section--compact page-wrap"><div class="section-intro"><p class="eyebrow">FAQ</p><h2>よくあるご質問</h2></div><div class="faq-list"><details><summary>ブランドごとに紹介できますか？</summary><p>各ブランドのコンセプトやメニューを紹介し、ブランドごとの運営店舗一覧へつなぐ構成です。掲載内容はサンプルです。</p></details><details><summary>店舗ごとの情報をまとめられますか？</summary><p>営業時間やアクセスなど、各店の情報を一覧に整理する想定です。ここに表示している情報はすべてサンプルです。</p></details><details><summary>店舗別のお知らせを案内できますか？</summary><p>ブランド共通のお知らせと、対象店舗を限定した案内の両方を設計できます。実際の更新機能は接続していません。</p></details></div></section>
-
-    <section class="contact-section"><div class="page-wrap contact-content"><div><p class="eyebrow">FOOD BUSINESS GROUP</p><h2>事業の全体像から、<br>各店舗の魅力まで。</h2><p>複数ブランド・店舗を運営する飲食会社の情報設計を紹介するサンプルです。</p><span class="sample-small">会社名・ブランド・店舗・所在地・営業時間・メニューは架空です。</span></div><div><a class="button button--light" href="#brands">運営ブランドを見る <span aria-hidden="true">↑</span></a></div></div></section>
+      </details>
+    </aside>
   </main>
-  <footer class="sample-footer"><div class="page-wrap"><a class="brand" href="../../index.html"><span class="brand__mark">街</span><span class="brand__word">街の食卓グループ<small>SAMPLE PAGE</small></span></a><p>複数ブランド・店舗を運営する架空の飲食会社のサンプルです。</p><a class="return-top" href="../../index.html">サンプル一覧へ戻る ↑</a></div></footer>
+
+  <footer class="sample-footer dining-footer">
+    <div class="page-wrap">
+      <span class="dining-footer__name">街の食卓グループ</span>
+      <p>架空の飲食グループのサイト見本です。</p>
+      <a class="return-top" href="../../index.html">LPサンプル一覧へ戻る <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
 </body>
 </html>
