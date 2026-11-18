@@ -644,7 +644,7 @@ a.dining-link:hover, .dining-brand a:hover .dining-link { color: var(--accent); 
 }
 .line-preview__thread:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: -3px; }
 .line-preview__message { display: flex; max-width: 92%; }
-.line-preview__message--sent { align-self: end; }
+.line-preview__message--sent { align-self: end; scroll-margin-block: 10px; }
 .line-preview__message p {
   max-width: 100%;
   margin: 0;
