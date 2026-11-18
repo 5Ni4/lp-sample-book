@@ -679,7 +679,8 @@ a.dining-link:hover, .dining-brand a:hover .dining-link { color: var(--accent); 
 .line-preview__modes button:hover { background: #f0f7f7; }
 .line-preview__modes button[aria-pressed="true"] { background: var(--stamp-blue); color: var(--accent-dark); }
 .line-preview__hint { margin: 10px 0 8px; color: var(--muted); font-size: 12px; }
-.line-preview__choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)); gap: 7px; }
+.line-preview__choices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+[data-line-picker="emoji"] .line-preview__choices { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .line-preview__choices button {
   display: grid;
   grid-template-rows: clamp(44px, 5vw, 64px) 1fr;
@@ -732,8 +733,6 @@ a.dining-link:hover, .dining-brand a:hover .dining-link { color: var(--accent); 
   .line-preview { grid-template-columns: 1fr; gap: 12px; }
   .line-preview__thread { flex: none; min-height: 0; height: clamp(165px, 30svh, 240px); padding: 12px; }
   .line-preview__controls { padding: 12px; }
-  .line-preview__choices { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  [data-line-picker="emoji"] .line-preview__choices { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .theme--524 :is(.stamp-header .brand, .stamp-footer .brand, .stamp-nav a, .stamp-hero h1, .stamp-hero__subtitle, .stamp-button, .stamp-section h2, .stamp-product h3, .stamp-about__store, .line-preview h3, .line-preview button, .line-preview label) {
