@@ -11,7 +11,7 @@
 </head>
 <body class="theme--gallery">
   <a class="skip-link" href="#main">本文へ移動</a>
-  <div class="demo-strip"><span>LP SAMPLE BOOK</span><span>店舗・イベント情報はサンプル設定。524のキャラクターを使用しています</span></div>
+  <div class="demo-strip"><span>LP SAMPLE BOOK</span><span>店舗・イベント・通販はサンプル設定。524のキャラクターを使用しています</span></div>
   <header class="site-header site-header--gallery">
     <a class="brand" href="./" aria-label="LPサンプルブック トップ">
       <span class="brand__mark">L</span>
@@ -63,10 +63,11 @@
         <p class="section-heading__aside">目的やお客さまに合わせて、<br>ページの見せ方と更新の仕組みを組み立てます。</p>
       </div>
       <div class="filter-row" role="group" aria-label="業種でサンプルを絞り込む">
-        <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">すべて <span>03</span></button>
+        <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">すべて <span>04</span></button>
         <button class="filter-chip" type="button" data-filter="restaurant" aria-pressed="false">飲食・多店舗 <span>01</span></button>
         <button class="filter-chip" type="button" data-filter="character" aria-pressed="false">キャラクター・LINE <span>01</span></button>
         <button class="filter-chip" type="button" data-filter="event" aria-pressed="false">イベント・地域 <span>01</span></button>
+        <button class="filter-chip" type="button" data-filter="nail" aria-pressed="false">通販・ネイル <span>01</span></button>
       </div>
       <div class="sample-grid">
         <article class="sample-card" data-category="restaurant">
@@ -83,7 +84,7 @@
               <span class="preview-label">DINING / LOCATIONS</span>
             </div>
             <div class="sample-card__body">
-              <div class="card-kicker"><span>飲食・多店舗</span><span>01 / 03</span></div>
+              <div class="card-kicker"><span>飲食・多店舗</span><span>01 / 04</span></div>
               <h3>複数店舗を運営する飲食会社</h3>
               <p>食堂・麺処・酒場。料理の写真から、3ブランド・6店舗を選べる飲食グループのサイト。</p>
               <div class="card-intent"><span>想定する行動</span><strong>料理から店を選ぶ</strong></div>
@@ -95,15 +96,21 @@
         <article class="sample-card" data-category="character">
           <a class="sample-card__link" href="sites/524-line-stickers/" aria-label="524のLINEスタンプLPサンプルを見る">
             <div class="sample-card__preview preview--524" aria-hidden="true">
-              <div class="mini-browser"><div class="mini-browser__top"><i></i><i></i><i></i></div><div class="mini-524"><span>524 / STICKER</span><b>返事に迷ったら、<br>524のひとこと。</b><img src="assets/524-stickers/understood.png" alt=""></div></div>
+              <div class="mini-browser">
+                <div class="mini-browser__top"><i></i><i></i><i></i></div>
+                <div class="mini-524">
+                  <span>LINEスタンプ</span><b>524の<br>毎日のひとこと</b>
+                  <img src="assets/524-stickers/understood.webp" width="640" height="640" loading="lazy" alt="">
+                </div>
+              </div>
               <span class="preview-label">CHARACTER / LINE</span>
             </div>
             <div class="sample-card__body">
-              <div class="card-kicker"><span>キャラクター・LINE</span><span>02 / 03</span></div>
+              <div class="card-kicker"><span>キャラクター・LINE</span><span>02 / 04</span></div>
               <h3>524のLINEスタンプ</h3>
-              <p>日々の会話に添えやすい524の表情と、スタンプ紹介の見せ方を提案。</p>
+              <p>524の4つの絵柄と、日々のトークで使えるひとことを紹介。</p>
               <div class="card-intent"><span>想定する行動</span><strong>スタンプの見本を見る</strong></div>
-              <div class="card-footer"><span>キャラクター・商品紹介の見本</span><b aria-hidden="true">↗</b></div>
+              <div class="card-footer"><span>絵柄一覧・配信情報</span><b aria-hidden="true">↗</b></div>
             </div>
           </a>
         </article>
@@ -115,11 +122,34 @@
               <span class="preview-label">EVENT / COMMUNITY</span>
             </div>
             <div class="sample-card__body">
-              <div class="card-kicker"><span>イベント・地域</span><span>03 / 03</span></div>
+              <div class="card-kicker"><span>イベント・地域</span><span>03 / 04</span></div>
               <h3>地域マルシェ</h3>
               <p>開催概要、出店者、会場マップをまとめて来場や出店の案内へ。</p>
               <div class="card-intent"><span>想定する行動</span><strong>会場・出店情報を見る</strong></div>
               <div class="card-footer"><span>イベント告知・出店案内の見本</span><b aria-hidden="true">↗</b></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="sample-card" data-category="nail">
+          <a class="sample-card__link" href="sites/nail-tips/" aria-label="ネイルチップの販売LPサンプルを見る">
+            <div class="sample-card__preview preview--nail" aria-hidden="true">
+              <div class="mini-browser">
+                <div class="mini-browser__top"><i></i><i></i><i></i></div>
+                <div class="mini-nail">
+                  <span>指先日和</span>
+                  <b>選べるネイルチップ</b>
+                  <img src="assets/nail-tips/collection.jpg" width="1536" height="510" loading="lazy" alt="">
+                </div>
+              </div>
+              <span class="preview-label">NAIL TIPS / SHOP</span>
+            </div>
+            <div class="sample-card__body">
+              <div class="card-kicker"><span>通販・ネイル</span><span>04 / 04</span></div>
+              <h3>ネイルチップの販売</h3>
+              <p>デザインとサイズを選び、送料込みの金額と注文内容を確認。</p>
+              <div class="card-intent"><span>想定する行動</span><strong>注文の流れを試す</strong></div>
+              <div class="card-footer"><span>商品一覧・決済前の注文確認</span><b aria-hidden="true">↗</b></div>
             </div>
           </a>
         </article>

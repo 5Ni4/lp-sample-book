@@ -5,8 +5,9 @@
 ## サンプル
 
 - 飲食・多店舗：架空の「街の食卓グループ」。食堂・麺処・酒場の3ブランド、6店舗を紹介するグループサイト
-- キャラクター・LINE：524キャラクターを使ったLINEスタンプ紹介ページ
+- キャラクター・LINE：「524の毎日のひとこと」。オリジナルキャラクターの絵柄見本と配信情報を載せたLINEスタンプ紹介ページ
 - イベント・地域：架空の「まちの輪マルシェ」案内
+- 通販・ネイル：架空の「指先日和」。ネイルチップの販売ページと注文確認デモ
 
 トップページのカテゴリボタンで絞り込み、各カードからサンプルLPを開けます。
 
@@ -17,6 +18,7 @@
 - 飲食グループの料理写真は、サンプル用の生成画像です。
 - 記事作成ボタンは固定の文章を表示する画面プロトタイプです。MCP、生成AI、Headless CMSには接続していません。
 - フォームは入力内容を送信・保存しません。LINEアプリや販売ページにも接続していません。
+- ネイルチップの注文フォームは、フォームメーラーとPayPalでの決済を想定した画面デモです。商品選択、送料込みの合計、決済前の確認までを端末内で表示します。注文や支払いは発生しません。
 - 実際の案件で使う場合は、サービス内容、事実、料金、利用権限、CMS、MCPの接続先、確認・公開手順を個別に決めます。
 
 ## 公開ページ
@@ -27,6 +29,7 @@ GitHub Pagesで `main` ブランチのルートから公開しています。
 - 飲食・多店舗：https://5ni4.github.io/lp-sample-book/sites/restaurant/
 - キャラクター・LINE：https://5ni4.github.io/lp-sample-book/sites/524-line-stickers/
 - イベント・地域：https://5ni4.github.io/lp-sample-book/sites/local-marche/
+- 通販・ネイル：https://5ni4.github.io/lp-sample-book/sites/nail-tips/
 
 ## ローカルで見る
 
@@ -40,9 +43,11 @@ GitHub Pagesで `main` ブランチのルートから公開しています。
 - `assets/favicon.svg`：サンプルブックのアイコン
 - `assets/524-stickers/`：524のキャラクター画像
 - `assets/restaurant/`：飲食グループの料理写真
+- `assets/nail-tips/`：ネイルチップの商品イメージ
 - `sites/restaurant/index.html`：複数店舗を運営する飲食会社
 - `sites/524-line-stickers/index.html`：524のLINEスタンプ紹介
 - `sites/local-marche/index.html`：地域マルシェ
+- `sites/nail-tips/index.html`：ネイルチップの販売と注文確認デモ
 
 ## GitHub Pages
 
