@@ -1,38 +1,47 @@
 # LP Sample Book
 
-業種別のLPサンプルを見られる、静的なポートフォリオサイトです。デザイン、Headless CMSによる更新運用、MCPを使った記事下書き作成の流れを紹介する目的で作っています。
+業種や目的の違うLPを見られる、静的なポートフォリオサイトです。デザイン、更新しやすさ、記事下書き作成の流れを紹介する目的で作っています。
 
 ## サンプル
 
-- 飲食・食品：焼き菓子店の季節ギフト
-- 美容・ウェルネス：少人数ピラティス教室
-- 教室・スクール：こども絵画教室
+- 飲食・多店舗：架空の飲食店「ごはん処 こより」の店舗案内
+- キャラクター・LINE：524キャラクターを使ったLINEスタンプ紹介ページ
+- イベント・地域：架空の「まちの輪マルシェ」案内
 
-トップページの業種ボタンで絞り込み、各カードからサンプルLPを開けます。
+トップページのカテゴリボタンで絞り込み、各カードからサンプルLPを開けます。
 
 ## デモの範囲
 
-- 店名、サービス、価格、日程、連絡先、内容はすべて架空です。
-- 記事作成のボタンは固定の文章を表示する画面プロトタイプです。MCP、生成AI、Headless CMSには接続していません。
-- フォームは入力内容を送信・保存しません。
+- 524のキャラクター画像を使用しています。スタンプセット名、収録数、価格、販売状況、購入先URLは設定していません。
+- 飲食店、店舗、メニュー、価格、イベント、日時、会場、出店者、連絡先などはサンプル用の架空情報です。
+- 記事作成ボタンは固定の文章を表示する画面プロトタイプです。MCP、生成AI、Headless CMSには接続していません。
+- フォームは入力内容を送信・保存しません。LINEアプリや販売ページにも接続していません。
 - 実際の案件で使う場合は、サービス内容、事実、料金、利用権限、CMS、MCPの接続先、確認・公開手順を個別に決めます。
+
+## 公開ページ
+
+GitHub Pagesで `main` ブランチのルートから公開しています。
+
+- サイト：https://5ni4.github.io/lp-sample-book/
+- 飲食・多店舗：https://5ni4.github.io/lp-sample-book/sites/restaurant/
+- キャラクター・LINE：https://5ni4.github.io/lp-sample-book/sites/524-line-stickers/
+- イベント・地域：https://5ni4.github.io/lp-sample-book/sites/local-marche/
 
 ## ローカルで見る
 
 `index.html` をブラウザーで開きます。外部ライブラリやビルド工程はありません。
 
-## GitHub Pages
-
-GitHub Pagesを有効にする場合は、リポジトリの **Settings → Pages → Build and deployment** で、`Deploy from a branch`、ブランチ `main`、フォルダー `/ (root)` を選びます。
-
 ## ディレクトリー
 
-```text
-index.html                 業種一覧とサンプル集トップ
-assets/styles.css          共通デザイン
-assets/site.js             業種絞り込み・画面デモ
-assets/favicon.svg         サンプルブックのアイコン
-sites/bakery/index.html    焼き菓子店
-sites/pilates/index.html  ピラティス教室
-sites/art-class/index.html こども絵画教室
-```
+- `index.html`：カテゴリ一覧とサンプル集トップ
+- `assets/styles.css`：共通デザイン
+- `assets/site.js`：カテゴリ絞り込み・画面デモ
+- `assets/favicon.svg`：サンプルブックのアイコン
+- `assets/524-stickers/`：524のキャラクター画像
+- `sites/restaurant/index.html`：複数店舗の飲食店
+- `sites/524-line-stickers/index.html`：524のLINEスタンプ紹介
+- `sites/local-marche/index.html`：地域マルシェ
+
+## GitHub Pages
+
+GitHub Pagesの公開元は、ブランチ `main`、フォルダー `/ (root)` です。
