@@ -111,6 +111,7 @@ document.querySelectorAll("[data-line-preview]").forEach((preview) => {
   const send = preview.querySelector("[data-line-send]");
   const undo = preview.querySelector("[data-line-undo]");
   const feedback = preview.querySelector("[data-line-feedback]");
+  const compactViewport = window.matchMedia("(max-width: 650px), (max-height: 500px) and (pointer: coarse)");
   const emojiChoices = [];
 
   function readDraft() {
@@ -162,7 +163,8 @@ document.querySelectorAll("[data-line-preview]").forEach((preview) => {
   preview.querySelectorAll('[data-line-picker="sticker"] [data-line-item]').forEach((button) => {
     button.addEventListener("click", () => {
       feedback.textContent = "";
-      sendMessage({ text: "", items: [button], layout: "sticker" });
+      const entry = appendMessage({ text: "", items: [button], layout: "sticker" });
+      revealMessage(entry);
     });
   });
   preview.querySelectorAll('[data-line-picker="emoji"] [data-line-item]').forEach((button) => {
@@ -185,7 +187,7 @@ document.querySelectorAll("[data-line-preview]").forEach((preview) => {
     if (undo.hidden && removed) removed.focus({preventScroll: true});
   });
 
-  function sendMessage(message) {
+  function appendMessage(message) {
     const entry = document.createElement("li");
     entry.className = "line-preview__message line-preview__message--sent";
     entry.dataset.lineSent = "";
@@ -194,20 +196,34 @@ document.querySelectorAll("[data-line-preview]").forEach((preview) => {
     entry.append(bubble);
     thread.append(entry);
     thread.scrollTop = thread.scrollHeight;
-    const bounds = entry.getBoundingClientRect();
-    if (bounds.top < 0 || bounds.bottom > window.innerHeight) {
-      entry.scrollIntoView({block: "nearest"});
-    }
+    return entry;
+  }
+
+  function revealMessage(entry) {
+    const viewport = window.visualViewport;
+    const visibleTop = (viewport?.offsetTop ?? 0) + 8;
+    const visibleBottom = (viewport?.offsetTop ?? 0) + (viewport?.height ?? window.innerHeight) - 8;
+    const panel = preview.getBoundingClientRect();
+    const conversation = thread.getBoundingClientRect();
+    const message = entry.getBoundingClientRect();
+    // Keep the picker in view when it fits. On shorter screens, reveal the visible part of the message.
+    const showPanel = compactViewport.matches && panel.height <= visibleBottom - visibleTop;
+    const top = showPanel ? panel.top : Math.max(message.top, conversation.top);
+    const bottom = showPanel ? panel.bottom : Math.min(message.bottom, conversation.bottom);
+    const distance = top < visibleTop ? top - visibleTop : Math.max(0, bottom - visibleBottom);
+    if (Math.abs(distance) >= 1) window.scrollBy({top: distance, behavior: "instant"});
   }
 
   send.addEventListener("click", () => {
     const message = readDraft();
     if (!message.text && !message.items.length) return;
-    sendMessage(message);
+    const entry = appendMessage(message);
+    input.blur();
     input.value = "";
     emojiChoices.length = 0;
     feedback.textContent = "";
     updateDraft();
+    revealMessage(entry);
   });
 
   preview.querySelector("[data-line-reset]").addEventListener("click", () => {
