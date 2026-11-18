@@ -62,19 +62,19 @@
               <button type="button" data-line-mode="emoji" aria-pressed="false">絵文字</button>
             </div>
             <div data-line-picker="sticker">
-              <p class="line-preview__hint">スタンプを1つ選んで送信します。</p>
+              <p class="line-preview__hint">タップするとトーク画面に表示されます。</p>
               <div class="line-preview__choices" role="group" aria-label="スタンプの絵柄">
-                <button type="button" data-line-item aria-pressed="false">
-                  <img src="../../assets/524-line-preview/ukkari.png" alt="" loading="lazy" width="224" height="224"><span>充電ない</span>
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/ukkari.webp" alt="" loading="lazy" width="224" height="224"><span>充電ない</span>
                 </button>
-                <button type="button" data-line-item aria-pressed="false">
-                  <img src="../../assets/524-line-preview/bento.png" alt="" loading="lazy" width="259" height="224"><span>お昼いこ！</span>
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/bento.webp" alt="" loading="lazy" width="259" height="224"><span>お昼いこ！</span>
                 </button>
-                <button type="button" data-line-item aria-pressed="false">
-                  <img src="../../assets/524-line-preview/summer-2.png" alt="" loading="lazy" width="224" height="224"><span>海辺の524</span>
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/summer-2.webp" alt="" loading="lazy" width="224" height="224"><span>海辺の524</span>
                 </button>
-                <button type="button" data-line-item aria-pressed="false">
-                  <img src="../../assets/524-line-preview/summer.png" alt="" loading="lazy" width="224" height="224"><span>水やり</span>
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/summer.webp" alt="" loading="lazy" width="224" height="224"><span>水やり</span>
                 </button>
               </div>
             </div>
@@ -84,30 +84,29 @@
               <p class="line-preview__hint">選んだ絵文字は文末に入ります。</p>
               <div class="line-preview__choices" role="group" aria-label="絵文字の絵柄">
                 <button type="button" data-line-item>
-                  <img src="../../assets/524-line-preview/onigiri.png" alt="" loading="lazy" width="180" height="180"><span>梅おにぎり</span>
+                  <img src="../../assets/524-line-preview/onigiri.webp" alt="" loading="lazy" width="180" height="180"><span>梅おにぎり</span>
                 </button>
                 <button type="button" data-line-item>
-                  <img src="../../assets/524-line-preview/sushi.png" alt="" loading="lazy" width="180" height="180"><span>まぐろ寿司</span>
+                  <img src="../../assets/524-line-preview/sushi.webp" alt="" loading="lazy" width="180" height="180"><span>まぐろ寿司</span>
                 </button>
                 <button type="button" data-line-item>
-                  <img src="../../assets/524-line-preview/family-restaurant.png" alt="" loading="lazy" width="180" height="180"><span>ドリア</span>
+                  <img src="../../assets/524-line-preview/family-restaurant.webp" alt="" loading="lazy" width="180" height="180"><span>ドリア</span>
                 </button>
               </div>
-            </div>
-
-            <div class="line-preview__draft">
-              <div class="line-preview__bar">
-                <h3>下書き</h3>
-                <button type="button" class="line-preview__utility" data-line-undo hidden>絵文字を1つ戻す</button>
+              <div class="line-preview__draft" data-line-draft-panel hidden>
+                <div class="line-preview__bar">
+                  <h3>プレビュー</h3>
+                  <button type="button" class="line-preview__utility" data-line-undo hidden>絵文字を1つ戻す</button>
+                </div>
+                <div data-line-draft></div>
               </div>
-              <div data-line-draft></div>
+              <button type="button" class="button stamp-button line-preview__send" data-line-send disabled>送信</button>
             </div>
-            <button type="button" class="button stamp-button line-preview__send" data-line-send disabled>送信をプレビュー</button>
-            <p class="line-preview__note" data-line-feedback role="status"></p>
+            <p class="line-preview__feedback" data-line-feedback role="status"></p>
           </div>
         </div>
         <noscript><p>送信プレビューにはJavaScriptが必要です。</p></noscript>
-        <p class="line-preview__note">このページの中だけで試せます。LINEへの送信や入力内容の保存はありません。</p>
+        <p class="line-preview__note">R-524の作品を、このページ内で試せます。送った内容はこの画面だけに表示され、保存されません。</p>
       </div>
     </section>
 
