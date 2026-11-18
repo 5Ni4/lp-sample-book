@@ -7,6 +7,7 @@
   <title>524｜LINEスタンプと絵文字</title>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/styles.css">
+  <script src="../../assets/site.js" defer></script>
 </head>
 <body class="sample-page theme--524">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -17,6 +18,7 @@
       <span class="brand__word">R-524</span>
     </a>
     <nav class="stamp-nav" aria-label="このページのメニュー">
+      <a href="#preview">送信を試す</a>
       <a href="#stickers">スタンプ</a>
       <a href="#emoji">絵文字</a>
       <a href="#about">524について</a>
@@ -30,12 +32,83 @@
           <h1 id="stamp-title">524</h1>
           <p class="stamp-hero__subtitle">LINEスタンプと絵文字</p>
           <p>黄色いからだに、5・2・4の目。R-524が描いた不思議生命体「524」のLINE作品です。</p>
-          <div class="stamp-hero__actions">
-            <a class="button stamp-button" href="#stickers">スタンプを見る <span aria-hidden="true">↓</span></a>
-            <a class="button stamp-button stamp-button--outline" href="#emoji">絵文字を見る <span aria-hidden="true">↓</span></a>
-          </div>
+          <a class="button stamp-button" href="#preview">送信を試す</a>
         </div>
         <img class="stamp-hero__art" src="../../assets/524-line-products/character.webp" alt="青い背景に浮かぶ、黄色いからだと5・2・4の目を持つキャラクター" width="960" height="960" fetchpriority="high">
+      </div>
+    </section>
+
+    <section id="preview" class="stamp-section stamp-section--tint" aria-labelledby="preview-title">
+      <div class="page-wrap">
+        <header class="stamp-section__head">
+          <h2 id="preview-title">送信プレビュー</h2>
+          <p>スタンプを送ったときや、文章に絵文字を添えたときの見え方を試せます。</p>
+        </header>
+        <div class="line-preview" data-line-preview hidden>
+          <div class="line-preview__conversation">
+            <div class="line-preview__bar">
+              <h3>トーク画面</h3>
+              <button type="button" class="line-preview__utility" data-line-reset>最初に戻す</button>
+            </div>
+            <ol class="line-preview__thread" data-line-thread role="log" aria-label="送信結果" tabindex="0">
+              <li class="line-preview__message">
+                <p>今日もおつかれさま！</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="line-preview__controls">
+            <div class="line-preview__modes" role="group" aria-label="試す種類">
+              <button type="button" data-line-mode="sticker" aria-pressed="true">スタンプ</button>
+              <button type="button" data-line-mode="emoji" aria-pressed="false">絵文字</button>
+            </div>
+            <div data-line-picker="sticker">
+              <p class="line-preview__hint">スタンプを1つ選んで送信します。</p>
+              <div class="line-preview__choices" role="group" aria-label="スタンプの絵柄">
+                <button type="button" data-line-item aria-pressed="false">
+                  <img src="../../assets/524-line-preview/ukkari.png" alt="" loading="lazy" width="224" height="224"><span>充電ない</span>
+                </button>
+                <button type="button" data-line-item aria-pressed="false">
+                  <img src="../../assets/524-line-preview/bento.png" alt="" loading="lazy" width="259" height="224"><span>お昼いこ！</span>
+                </button>
+                <button type="button" data-line-item aria-pressed="false">
+                  <img src="../../assets/524-line-preview/summer-2.png" alt="" loading="lazy" width="224" height="224"><span>海辺の524</span>
+                </button>
+                <button type="button" data-line-item aria-pressed="false">
+                  <img src="../../assets/524-line-preview/summer.png" alt="" loading="lazy" width="224" height="224"><span>水やり</span>
+                </button>
+              </div>
+            </div>
+            <div data-line-picker="emoji" hidden>
+              <label class="line-preview__text-label" for="line-preview-text">メッセージ</label>
+              <textarea id="line-preview-text" data-line-text rows="2" maxlength="120" placeholder="今度のお昼、何食べる？"></textarea>
+              <p class="line-preview__hint">選んだ絵文字は文末に入ります。</p>
+              <div class="line-preview__choices" role="group" aria-label="絵文字の絵柄">
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/onigiri.png" alt="" loading="lazy" width="180" height="180"><span>梅おにぎり</span>
+                </button>
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/sushi.png" alt="" loading="lazy" width="180" height="180"><span>まぐろ寿司</span>
+                </button>
+                <button type="button" data-line-item>
+                  <img src="../../assets/524-line-preview/family-restaurant.png" alt="" loading="lazy" width="180" height="180"><span>ドリア</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="line-preview__draft">
+              <div class="line-preview__bar">
+                <h3>下書き</h3>
+                <button type="button" class="line-preview__utility" data-line-undo hidden>絵文字を1つ戻す</button>
+              </div>
+              <div data-line-draft></div>
+            </div>
+            <button type="button" class="button stamp-button line-preview__send" data-line-send disabled>送信をプレビュー</button>
+            <p class="line-preview__note" data-line-feedback role="status"></p>
+          </div>
+        </div>
+        <noscript><p>送信プレビューにはJavaScriptが必要です。</p></noscript>
+        <p class="line-preview__note">このページの中だけで試せます。LINEへの送信や入力内容の保存はありません。</p>
       </div>
     </section>
 
@@ -50,7 +123,6 @@
             <div class="stamp-product__art"><img src="../../assets/524-line-products/ukkari.png" alt="" width="240" height="240" loading="lazy"></div>
             <div class="stamp-product__body">
               <h3>524のうっかり日常</h3>
-              <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
             </div>
           </a>
         </li>
@@ -59,7 +131,6 @@
             <div class="stamp-product__art"><img src="../../assets/524-line-products/bento.png" alt="" width="240" height="240" loading="lazy"></div>
             <div class="stamp-product__body">
               <h3>524のお弁当屋さん（ランチも丼もあるよ）</h3>
-              <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
             </div>
           </a>
         </li>
@@ -68,7 +139,6 @@
             <div class="stamp-product__art"><img src="../../assets/524-line-products/summer-2.png" alt="" width="240" height="240" loading="lazy"></div>
             <div class="stamp-product__body">
               <h3>524とゆるっと夏休み 第2弾</h3>
-              <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
             </div>
           </a>
         </li>
@@ -77,7 +147,6 @@
             <div class="stamp-product__art"><img src="../../assets/524-line-products/summer.png" alt="" width="240" height="240" loading="lazy"></div>
             <div class="stamp-product__body">
               <h3>524とゆるっと夏休み</h3>
-              <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
             </div>
           </a>
         </li>
@@ -96,7 +165,6 @@
               <div class="stamp-product__art"><img src="../../assets/524-line-products/onigiri.png" alt="" width="240" height="240" loading="lazy"></div>
               <div class="stamp-product__body">
                 <h3>524のおにぎり屋さん</h3>
-                <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
               </div>
             </a>
           </li>
@@ -105,7 +173,6 @@
               <div class="stamp-product__art"><img src="../../assets/524-line-products/sushi.png" alt="" width="240" height="240" loading="lazy"></div>
               <div class="stamp-product__body">
                 <h3>524のお寿司屋さん</h3>
-                <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
               </div>
             </a>
           </li>
@@ -114,7 +181,6 @@
               <div class="stamp-product__art"><img src="../../assets/524-line-products/family-restaurant.png" alt="" width="240" height="240" loading="lazy"></div>
               <div class="stamp-product__body">
                 <h3>ファミレス524</h3>
-                <span class="stamp-store-link">LINE STOREで見る <span aria-hidden="true">↗</span></span>
               </div>
             </a>
           </li>
@@ -127,8 +193,8 @@
       <div>
         <p>524は、原作者R-524が描いた原案から生まれた不思議生命体です。「524のひみつ基地」には、イラストやWebで遊べる作品も集まっています。</p>
         <div class="stamp-about__links">
-          <a class="stamp-store-link" href="https://524-open-character-project.pages.dev/">524のひみつ基地 <span aria-hidden="true">↗</span></a>
-          <a class="stamp-store-link" href="https://store.line.me/stickershop/author/5984470/ja">R-524のLINE STORE <span aria-hidden="true">↗</span></a>
+          <a href="https://524-open-character-project.pages.dev/">524のひみつ基地</a>
+          <a href="https://store.line.me/stickershop/author/5984470/ja">R-524のLINE STORE</a>
         </div>
       </div>
     </section>
@@ -140,7 +206,7 @@
         <span class="brand__mark brand__mark--524" aria-hidden="true">524</span>
         <span class="brand__word">R-524</span>
       </a>
-      <a class="return-top" href="../../index.html">LPサンプル一覧へ戻る <span aria-hidden="true">↗</span></a>
+      <a class="return-top" href="../../index.html">LPサンプル一覧へ戻る</a>
     </div>
   </footer>
 </body>

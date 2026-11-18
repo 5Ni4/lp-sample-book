@@ -100,3 +100,129 @@ document.querySelectorAll("[data-nail-order]").forEach((form) => {
   updateTotals();
   form.querySelector("fieldset").disabled = false;
 });
+
+document.querySelectorAll("[data-line-preview]").forEach((preview) => {
+  const thread = preview.querySelector("[data-line-thread]");
+  const modeButtons = [...preview.querySelectorAll("[data-line-mode]")];
+  const pickers = [...preview.querySelectorAll("[data-line-picker]")];
+  const stampButtons = [...preview.querySelectorAll('[data-line-picker="sticker"] [data-line-item]')];
+  const input = preview.querySelector("[data-line-text]");
+  const draft = preview.querySelector("[data-line-draft]");
+  const send = preview.querySelector("[data-line-send]");
+  const undo = preview.querySelector("[data-line-undo]");
+  const feedback = preview.querySelector("[data-line-feedback]");
+  const emojiChoices = [];
+  let mode = "sticker";
+  let stamp = null;
+
+  function readDraft() {
+    if (mode === "sticker") return { text: "", items: stamp ? [stamp] : [], layout: "sticker" };
+    const text = input.value.trim();
+    const layout = !text && emojiChoices.length <= 3 ? "emoji-row" : "bubble";
+    return { text, items: emojiChoices, layout };
+  }
+
+  function renderMessage(target, {text, items, layout}) {
+    target.dataset.lineLayout = layout;
+    const contents = document.createDocumentFragment();
+    if (text) contents.append(text);
+    for (const item of items) {
+      const image = document.createElement("img");
+      image.src = item.querySelector("img").getAttribute("src");
+      image.alt = item.textContent.trim();
+      contents.append(image);
+    }
+    target.replaceChildren(contents);
+  }
+
+  function updateDraft() {
+    const message = readDraft();
+    const empty = !message.text && !message.items.length;
+    send.disabled = empty;
+    undo.hidden = mode !== "emoji" || !emojiChoices.length;
+    draft.classList.toggle("line-preview__empty", empty);
+    stampButtons.forEach((button) => button.setAttribute("aria-pressed", String(button === stamp)));
+
+    if (empty) {
+      delete draft.dataset.lineLayout;
+      draft.textContent = mode === "sticker" ? "スタンプを選んでください" : "文章を入力するか絵文字を選んでください";
+      return;
+    }
+    renderMessage(draft, message);
+  }
+
+  function setMode(nextMode) {
+    mode = nextMode;
+    modeButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.lineMode === mode)));
+    pickers.forEach((picker) => {
+      picker.hidden = picker.dataset.linePicker !== mode;
+    });
+    feedback.textContent = "";
+    updateDraft();
+  }
+
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => setMode(button.dataset.lineMode));
+  });
+  preview.querySelectorAll("[data-line-item]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const label = button.textContent.trim();
+      if (mode === "sticker") {
+        stamp = stamp === button ? null : button;
+        feedback.textContent = stamp ? label + "を選びました" : "選択を解除しました";
+      } else {
+        if (emojiChoices.length >= 8) {
+          feedback.textContent = "絵文字は一度に8個まで試せます";
+          return;
+        }
+        emojiChoices.push(button);
+        feedback.textContent = label + "を追加しました";
+      }
+      updateDraft();
+    });
+  });
+
+  input.addEventListener("input", updateDraft);
+  undo.addEventListener("click", () => {
+    emojiChoices.pop();
+    feedback.textContent = "最後の絵文字を取り除きました";
+    updateDraft();
+    if (undo.hidden) input.focus({preventScroll: true});
+  });
+
+  send.addEventListener("click", () => {
+    const message = readDraft();
+    if (!message.text && !message.items.length) return;
+    const entry = document.createElement("li");
+    entry.className = "line-preview__message line-preview__message--sent";
+    entry.dataset.lineSent = "";
+    const bubble = document.createElement("p");
+    renderMessage(bubble, message);
+    entry.append(bubble);
+    thread.append(entry);
+    thread.scrollTop = thread.scrollHeight;
+    if (mode === "sticker") {
+      stamp = null;
+    } else {
+      input.value = "";
+      emojiChoices.length = 0;
+    }
+    updateDraft();
+    feedback.textContent = "送信結果を表示しました";
+    thread.focus({preventScroll: true});
+    thread.scrollIntoView({block: "nearest"});
+  });
+
+  preview.querySelector("[data-line-reset]").addEventListener("click", () => {
+    thread.querySelectorAll("[data-line-sent]").forEach((message) => message.remove());
+    thread.scrollTop = 0;
+    stamp = null;
+    input.value = "";
+    emojiChoices.length = 0;
+    setMode("sticker");
+    feedback.textContent = "最初の状態に戻しました";
+  });
+
+  updateDraft();
+  preview.hidden = false;
+});
