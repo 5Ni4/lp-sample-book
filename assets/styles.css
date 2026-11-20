@@ -528,7 +528,7 @@ a.dining-link:hover, .dining-brand a:hover .dining-link { color: var(--accent); 
   .dining-news__list summary span { margin-inline-end: 8px; }
 }
 
-.stamp-header .brand__word, .stamp-footer .brand__word { font-size: 14px; }
+.stamp-header .brand__word { font-size: clamp(18px, 2.5vw, 28px); letter-spacing: .02em; white-space: nowrap; }
 .stamp-nav { display: flex; flex-wrap: wrap; gap: 8px clamp(14px, 3vw, 32px); font-size: 13px; font-weight: 700; }
 .stamp-nav a { padding-block: 9px; }
 .stamp-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
@@ -725,7 +725,6 @@ a.dining-link:hover, .dining-brand a:hover .dining-link { color: var(--accent); 
 @media (max-width: 650px) {
   .stamp-header { gap: 8px; }
   .stamp-header .brand__mark, .stamp-footer .brand__mark { width: 34px; font-size: 11px; }
-  .stamp-header .brand__word, .stamp-footer .brand__word { font-size: 12px; }
   .stamp-nav { justify-content: end; gap: 0 10px; font-size: 11px; }
   .stamp-nav a { padding-block: 9px; white-space: nowrap; }
   .stamp-hero__inner, .stamp-about { grid-template-columns: 1fr; }
