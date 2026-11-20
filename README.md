@@ -15,7 +15,15 @@
 
 飲食トップに最新3件、[読みもの一覧](https://5ni4.github.io/lp-sample-book/sites/restaurant/journal/)に全6件を掲載しています。店舗とカテゴリの組み合わせで絞り込めます。絞り込み条件をURLに保持し、戻る・進むにも対応しています。各記事の末尾から関連店舗へ進めます。
 
-記事本文はサンプル用の架空情報です。JavaScriptを無効にしても一覧と記事を読めます。CMSや投稿管理画面には接続していません。記事の更新はHTMLファイルを編集して公開します。
+記事本文はサンプル用の架空情報です。JavaScriptを無効にしても一覧と記事を読めます。
+
+### NILTOで記事を管理する
+
+仕事用アカウントの[制作テスト](https://cms.nilto.com/770421477/contents)に、モデル「飲食グループの読みもの」（LUID `restaurant_journal`）を作成しています。タイトル・URL名・導入文・掲載日・メイン画像・本文・カテゴリ・掲載店舗を編集できます。本文はフレキシブルテキストです。URL名には英小文字・数字・ハイフン・アンダースコアを使用し、ほかの記事と重複させないでください。
+
+公開後、[Publish NILTO articles](https://github.com/5Ni4/lp-sample-book/actions/workflows/publish-nilto.yml)から「Run workflow」を実行すると、公開記事を取得し、一覧・記事本文・トップの最新3件を更新します。下書きはサイトに掲載されません。非公開にした記事は次の反映時に一覧・記事ページから除かれます。メイン画像を省略した場合は、選択した店舗の料理写真を表示します。
+
+公開データ専用キーはGitHub Actionsシークレット `NILTO_PUBLIC_API_KEY` に保存しています。キーはサイトのHTMLやJavaScriptに含めません。API取得や記事の検査に失敗した場合は公開処理を止め、直前の公開版を保持します。
 
 ## デモの範囲
 
@@ -31,7 +39,7 @@
 
 ## 公開ページ
 
-GitHub Pagesで `main` ブランチのルートから公開しています。
+GitHub Pagesで、`main` ブランチのファイルにNILTOの公開記事を取り込んで公開しています。
 
 - サイト：https://5ni4.github.io/lp-sample-book/
 - 飲食・多店舗：https://5ni4.github.io/lp-sample-book/sites/restaurant/
@@ -59,10 +67,12 @@ GitHub Pagesで `main` ブランチのルートから公開しています。
 - `assets/nail-tips/`：ネイルチップの商品イメージ
 - `sites/restaurant/index.html`：複数店舗を運営する飲食会社
 - `sites/restaurant/journal/`：読みもの一覧と6件の記事ページ
+- `scripts/build-nilto-site.py`・`scripts/templates/`：NILTOから公開記事を取得してHTMLを生成する処理
+- `.github/workflows/publish-nilto.yml`：NILTO記事の取得とGitHub Pagesへの公開
 - `sites/524-line-stickers/index.html`：524のキャラクター紹介とLINEスタンプ・絵文字一覧
 - `sites/local-marche/index.html`：地域マルシェ
 - `sites/nail-tips/index.html`：ネイルチップの販売と注文確認デモ
 
 ## GitHub Pages
 
-GitHub Pagesの公開元は、ブランチ `main`、フォルダー `/ (root)` です。
+GitHub Pagesの公開処理はGitHub Actionsです。`main` ブランチのサイトファイルをコピーし、NILTOの公開記事を反映した成果物を配信します。リポジトリ内の6記事はローカル表示用の見本として保持し、本番ビルド時にNILTOのデータで置き換えます。

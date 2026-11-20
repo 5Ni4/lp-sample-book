@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="$description">
+  <title>$title｜街の食卓グループ</title>
+  <link rel="icon" href="../../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../../assets/styles.css">
+  <link rel="stylesheet" href="../../../../assets/dining-journal.css">
+
+</head>
+<body class="sample-page theme--restaurant">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="demo-strip"><span>LP SAMPLE</span><span>架空の飲食グループの読みものです。料理写真は生成画像です。</span></div>
+  <header class="site-header dining-header">
+    <a class="brand" href="../../"><span class="brand__mark" aria-hidden="true">街</span><span class="brand__word">街の食卓グループ</span></a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="../../#brands">お店の紹介</a>
+      <a href="../" aria-current="false">読みもの</a>
+      <a class="button button--small" href="../../#stores">店舗一覧</a>
+    </nav>
+  </header>
+  <main id="main" class="page-wrap journal-page">
+    <nav class="journal-breadcrumb" aria-label="パンくず"><a href="../../">ホーム</a><a href="../">読みもの</a><span aria-current="page">$category</span></nav>
+    <article class="journal-article">
+      <header>
+        <div class="journal-meta"><time datetime="$date">$display_date</time><a href="../?category=$category_key">$category</a></div>
+        <h1>$title</h1>
+        <p class="journal-article__lead">$lead</p>
+      </header>
+      <img class="journal-article__image" src="$cover" width="760" height="570" alt="$alt" fetchpriority="high">
+      <div class="journal-article__body">$body</div>
+      <aside class="journal-visit" aria-label="この記事のお店">
+        <h2>この記事のお店</h2>
+        <ul>$stores</ul>
+      </aside>
+      <a class="journal-back" href="../">読みもの一覧に戻る</a>
+    </article>
+  </main>
+  <footer class="sample-footer dining-footer">
+    <div class="page-wrap">
+      <span class="dining-footer__name">街の食卓グループ</span>
+      <p>架空の飲食グループのサイト見本です。</p>
+      <a class="return-top" href="../../../../">LPサンプル一覧へ戻る</a>
+    </div>
+  </footer>
+</body>
+</html>

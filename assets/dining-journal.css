@@ -73,6 +73,13 @@
 .journal-article__body section { margin-top: 40px; }
 .journal-article__body h2 { margin: 0 0 14px; font: 600 24px/1.65 var(--serif); }
 .journal-article__body p { margin: 0; font-size: 16px; line-height: 2.1; }
+.journal-article__body { overflow-wrap: anywhere; }
+.journal-article__body > :is(h2, h3, h4, h5, h6) { margin-top: 40px; }
+.journal-article__body > p + p { margin-top: 16px; }
+.journal-article__body a { text-decoration: underline; text-underline-offset: 4px; }
+.journal-article__body img { display: block; max-width: 100%; height: auto; }
+.journal-article__body :is(pre, table) { display: block; max-width: 100%; overflow-x: auto; }
+.journal-article__body :is(th, td) { padding: 8px 12px; border: 1px solid var(--line); }
 .journal-visit { margin-top: 48px; padding: 24px; background: var(--soft); border-top: 1px solid var(--line); }
 .journal-visit h2 { margin: 0 0 12px; font-size: 18px; }
 .journal-visit ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 0; padding: 0; list-style: none; }

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="季節の料理や仕入れ、各店の日々の話。街の食卓グループの読みもの。">
+  <title>読みもの｜街の食卓グループ</title>
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <link rel="stylesheet" href="../../../assets/dining-journal.css">
+  <script src="../../../assets/dining-journal.js" defer></script>
+</head>
+<body class="sample-page theme--restaurant">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="demo-strip"><span>LP SAMPLE</span><span>架空の飲食グループの読みものです。料理写真は生成画像です。</span></div>
+  <header class="site-header dining-header">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">街</span><span class="brand__word">街の食卓グループ</span></a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="../#brands">お店の紹介</a>
+      <a href="./" aria-current="page">読みもの</a>
+      <a class="button button--small" href="../#stores">店舗一覧</a>
+    </nav>
+  </header>
+  <main id="main" class="page-wrap journal-page">
+    <nav class="journal-breadcrumb" aria-label="パンくず"><a href="../">ホーム</a><span aria-current="page">読みもの</span></nav>
+    <h1 class="journal-title">読みもの</h1>
+    <form class="journal-filters" data-journal-filters hidden aria-label="記事を絞り込む">
+      <label>店舗<select name="store" data-journal-store><option value="all">すべての店舗</option><option value="koyori-chuo">こより 中央通り店</option><option value="koyori-ekimae">こより 駅前店</option><option value="koyori-koen">こより 公園前店</option><option value="minamo-east">みなも 東口店</option><option value="minamo-south">みなも 南町店</option><option value="tsumugi-west">つむぎ 西口店</option></select></label>
+      <label>カテゴリ<select name="category" data-journal-category><option value="all">すべてのカテゴリ</option><option value="seasonal">季節の料理</option><option value="people">お店の話</option><option value="ingredients">仕入れの話</option><option value="news">お知らせ</option></select></label>
+      <button type="reset">絞り込みを解除</button>
+    </form>
+    <p class="journal-result" data-journal-result role="status" hidden></p>
+    <div class="journal-grid">$cards</div>
+    <p class="journal-empty" data-journal-empty hidden>該当する記事はありません。店舗やカテゴリを変更してご覧ください。</p>
+  </main>
+  <footer class="sample-footer dining-footer">
+    <div class="page-wrap">
+      <span class="dining-footer__name">街の食卓グループ</span>
+      <p>架空の飲食グループのサイト見本です。</p>
+      <a class="return-top" href="../../../">LPサンプル一覧へ戻る</a>
+    </div>
+  </footer>
+</body>
+</html>
