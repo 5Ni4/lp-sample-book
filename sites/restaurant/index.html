@@ -7,6 +7,7 @@
   <title>街の食卓グループ｜食堂・麺処・酒場</title>
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/dining-journal.css">
   <script src="../../assets/site.js" defer></script>
 </head>
 <body class="sample-page theme--restaurant">
@@ -23,7 +24,7 @@
     <nav class="main-nav" aria-label="メインナビゲーション">
       <a href="#about">私たちについて</a>
       <a href="#brands">お店の紹介</a>
-      <a href="#news">お知らせ</a>
+      <a href="journal/">読みもの</a>
       <a class="button button--small" href="#stores">店舗一覧</a>
     </nav>
   </header>
@@ -104,47 +105,52 @@
         <section id="stores-koyori" class="dining-store-group" aria-labelledby="koyori-title">
           <h3 id="koyori-title">ごはん処 こより <small>3店舗</small></h3>
           <ul class="dining-store-list">
-            <li><strong>中央通り店</strong><span>中央エリア</span><span class="dining-hours">11:00–21:00</span></li>
-            <li><strong>駅前店</strong><span>駅前エリア</span><span class="dining-hours">10:30–20:30</span></li>
-            <li><strong>公園前店</strong><span>公園エリア</span><span class="dining-hours">11:00–19:30</span></li>
+            <li id="store-koyori-chuo"><strong>中央通り店</strong><span>中央エリア</span><span class="dining-hours">11:00–21:00</span></li>
+            <li id="store-koyori-ekimae"><strong>駅前店</strong><span>駅前エリア</span><span class="dining-hours">10:30–20:30</span></li>
+            <li id="store-koyori-koen"><strong>公園前店</strong><span>公園エリア</span><span class="dining-hours">11:00–19:30</span></li>
           </ul>
         </section>
         <section id="stores-minamo" class="dining-store-group" aria-labelledby="minamo-title">
           <h3 id="minamo-title">麺処 みなも <small>2店舗</small></h3>
           <ul class="dining-store-list">
-            <li><strong>東口店</strong><span>東口エリア</span><span class="dining-hours">11:00–22:00</span></li>
-            <li><strong>南町店</strong><span>南町エリア</span><span class="dining-hours">11:30–20:30</span></li>
+            <li id="store-minamo-east"><strong>東口店</strong><span>東口エリア</span><span class="dining-hours">11:00–22:00</span></li>
+            <li id="store-minamo-south"><strong>南町店</strong><span>南町エリア</span><span class="dining-hours">11:30–20:30</span></li>
           </ul>
         </section>
         <section id="stores-tsumugi" class="dining-store-group" aria-labelledby="tsumugi-title">
           <h3 id="tsumugi-title">炭火酒場 つむぎ <small>1店舗</small></h3>
           <ul class="dining-store-list">
-            <li><strong>西口店</strong><span>西口エリア</span><span class="dining-hours">16:00–23:00</span></li>
+            <li id="store-tsumugi-west"><strong>西口店</strong><span>西口エリア</span><span class="dining-hours">16:00–23:00</span></li>
           </ul>
         </section>
       </div>
     </section>
 
-    <section id="news" class="dining-section dining-section--tint" aria-labelledby="news-title">
-      <div class="page-wrap dining-news">
-        <header class="dining-section__head">
-          <h2 id="news-title">お知らせ</h2>
-          <p>掲載内容はサンプルです。</p>
-        </header>
-        <div class="dining-news__list">
-          <details>
-            <summary><span>ごはん処 こより</span><strong>焼き魚の定食に、かぼちゃの煮物を添えます</strong></summary>
-            <p>こよりの3店舗で、焼き魚の定食にかぼちゃの煮物をお付けします。</p>
-          </details>
-          <details>
-            <summary><span>麺処 みなも</span><strong>温かいだし麺に、季節の野菜を</strong></summary>
-            <p>東口店と南町店で、だし麺に季節の青菜を添えてお出しします。</p>
-          </details>
-          <details>
-            <summary><span>炭火酒場 つむぎ</span><strong>炭火焼きに、しいたけとししとうが加わりました</strong></summary>
-            <p>西口店で、香ばしく焼き上げる野菜の小皿をご用意しています。</p>
-          </details>
-        </div>
+    <section id="news" class="dining-section dining-section--tint" aria-labelledby="journal-title">
+      <div class="page-wrap">
+        <header class="dining-section__head"><h2 id="journal-title">読みもの</h2><a class="dining-link" href="journal/">すべての記事を見る</a></header>
+        <div class="journal-grid"><article class="journal-card">
+  <a href="journal/koyori-autumn/">
+    <img src="../../assets/restaurant/koyori-meal.jpg" width="506" height="506" loading="lazy" alt="焼き魚と季節の小鉢を並べた定食">
+    <div class="journal-meta"><time datetime="2026-11-18">2026.11.18 </time><span>季節の料理</span></div>
+    <h3>焼き魚のとなりに、かぼちゃの小鉢。</h3>
+    <p class="journal-card__store">こより</p>
+  </a>
+</article><article class="journal-card">
+  <a href="journal/minamo-morning/">
+    <img src="../../assets/restaurant/minamo-noodles.jpg" width="506" height="506" loading="lazy" alt="澄んだだしに青菜を添えた麺">
+    <div class="journal-meta"><time datetime="2026-11-16">2026.11.16 </time><span>お店の話</span></div>
+    <h3>みなもの朝は、だしを引くところから。</h3>
+    <p class="journal-card__store">みなも</p>
+  </a>
+</article><article class="journal-card">
+  <a href="journal/tsumugi-mushrooms/">
+    <img src="../../assets/restaurant/tsumugi-grill.jpg" width="506" height="506" loading="lazy" alt="炭火焼きの鶏串と野菜の盛り合わせ">
+    <div class="journal-meta"><time datetime="2026-11-14">2026.11.14 </time><span>仕入れの話</span></div>
+    <h3>炭火にのせる、秋のしいたけ。</h3>
+    <p class="journal-card__store">つむぎ</p>
+  </a>
+</article></div>
       </div>
     </section>
 

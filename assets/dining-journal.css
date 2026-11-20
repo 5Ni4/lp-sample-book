@@ -1,0 +1,101 @@
+.journal-page { padding-bottom: clamp(48px, 7vw, 92px); }
+.journal-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-block: 24px 40px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.journal-breadcrumb a { text-decoration: underline; text-underline-offset: 4px; }
+.journal-title { margin: 0 0 32px; font: 500 clamp(32px, 4vw, 48px)/1.5 var(--serif); }
+.journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 28px; }
+.journal-card { min-width: 0; }
+.journal-card a { display: block; }
+.journal-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.journal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.journal-meta time { font-variant-numeric: tabular-nums; }
+.journal-meta span, .journal-meta a { color: var(--accent-dark); }
+.journal-card :is(h2, h3) {
+  margin: 10px 0 8px;
+  font: 600 20px/1.6 var(--serif);
+  overflow-wrap: anywhere;
+}
+.journal-card__store { margin: 0; color: var(--muted); font-size: 14px; }
+.journal-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 18px; }
+.journal-filters label { display: grid; gap: 6px; min-width: 0; font-size: 14px; }
+.journal-filters select {
+  width: 250px;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+}
+.journal-filters button {
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--accent-dark);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.journal-result { margin: 22px 0; color: var(--muted); font-size: 14px; }
+.journal-empty { padding-block: 30px; font-size: 16px; }
+.journal-article { max-width: 760px; margin-inline: auto; }
+.journal-article h1 {
+  margin: 16px 0 24px;
+  font: 500 clamp(28px, 3.5vw, 42px)/1.65 var(--serif);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.journal-article__lead { margin: 0 0 32px; font-size: 16px; line-height: 2; }
+.journal-article__image { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.journal-article__body section { margin-top: 40px; }
+.journal-article__body h2 { margin: 0 0 14px; font: 600 24px/1.65 var(--serif); }
+.journal-article__body p { margin: 0; font-size: 16px; line-height: 2.1; }
+.journal-visit { margin-top: 48px; padding: 24px; background: var(--soft); border-top: 1px solid var(--line); }
+.journal-visit h2 { margin: 0 0 12px; font-size: 18px; }
+.journal-visit ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 0; padding: 0; list-style: none; }
+.journal-visit a, .journal-back { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; font-size: 16px; }
+.journal-back { margin-top: 32px; }
+.dining-header .main-nav a { min-height: 44px; align-items: center; display: inline-flex; }
+.dining-store-list li[id] { scroll-margin-top: 24px; }
+.dining-store-list li:target { background: var(--accent-pale); outline: 1px solid var(--line); }
+@media (hover: hover) {
+  .journal-card a:hover :is(h2, h3), .journal-visit a:hover, .journal-back:hover { color: var(--accent); }
+  .journal-card a:hover img { opacity: .9; }
+}
+@media (max-width: 900px) {
+  .journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 22px; }
+}
+@media (max-width: 650px) {
+  .journal-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .journal-filters { gap: 14px; }
+  .journal-filters label { width: 100%; }
+  .journal-filters select { width: 100%; }
+  .journal-breadcrumb { margin-block: 20px 28px; }
+  .journal-article__body section { margin-top: 30px; }
+  .journal-article__body h2 { font-size: 22px; }
+  .journal-visit { padding: 20px; }
+  .dining-header .main-nav a:not(.button) { font-size: 13px; min-height: 44px; }
+}

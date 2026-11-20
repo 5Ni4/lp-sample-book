@@ -4,12 +4,18 @@
 
 ## サンプル
 
-- 飲食・多店舗：架空の「街の食卓グループ」。食堂・麺処・酒場の3ブランド、6店舗を紹介するグループサイト
+- 飲食・多店舗：架空の「街の食卓グループ」。3ブランド・6店舗の案内と、店舗・カテゴリで絞り込める読みもの
 - キャラクター・LINE：524のキャラクターサイト。販売中のLINEスタンプ4作品とLINE絵文字3作品を掲載
 - イベント・地域：架空の「まちの輪マルシェ」案内
 - 通販・ネイル：架空の「指先日和」。ネイルチップの販売ページと注文確認デモ
 
 トップページのカテゴリボタンで絞り込み、各カードからサンプルLPを開けます。
+
+## 飲食グループの読みもの
+
+飲食トップに最新3件、[読みもの一覧](https://5ni4.github.io/lp-sample-book/sites/restaurant/journal/)に全6件を掲載しています。店舗とカテゴリの組み合わせで絞り込めます。絞り込み条件をURLに保持し、戻る・進むにも対応しています。各記事の末尾から関連店舗へ進めます。
+
+記事本文はサンプル用の架空情報です。JavaScriptを無効にしても一覧と記事を読めます。CMSや投稿管理画面には接続していません。記事の更新はHTMLファイルを編集して公開します。
 
 ## デモの範囲
 
@@ -42,6 +48,7 @@ GitHub Pagesで `main` ブランチのルートから公開しています。
 - `index.html`：カテゴリ一覧とサンプル集トップ
 - `assets/styles.css`：共通デザイン
 - `assets/gallery.css`：サンプル一覧トップのデザイン
+- `assets/dining-journal.css`・`assets/dining-journal.js`：飲食ブログの表示と店舗・カテゴリ絞り込み
 - `assets/sample-previews/`：各サンプルページの実画面プレビュー
 - `assets/site.js`：カテゴリ絞り込み・画面デモ
 - `assets/favicon.svg`：サンプルブックのアイコン
@@ -51,6 +58,7 @@ GitHub Pagesで `main` ブランチのルートから公開しています。
 - `assets/restaurant/`：飲食グループの料理写真
 - `assets/nail-tips/`：ネイルチップの商品イメージ
 - `sites/restaurant/index.html`：複数店舗を運営する飲食会社
+- `sites/restaurant/journal/`：読みもの一覧と6件の記事ページ
 - `sites/524-line-stickers/index.html`：524のキャラクター紹介とLINEスタンプ・絵文字一覧
 - `sites/local-marche/index.html`：地域マルシェ
 - `sites/nail-tips/index.html`：ネイルチップの販売と注文確認デモ

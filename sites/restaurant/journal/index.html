@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="季節の料理や仕入れ、各店の日々の話。街の食卓グループの読みもの。">
+  <title>読みもの｜街の食卓グループ</title>
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <link rel="stylesheet" href="../../../assets/dining-journal.css">
+  <script src="../../../assets/dining-journal.js" defer></script>
+</head>
+<body class="sample-page theme--restaurant">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="demo-strip"><span>LP SAMPLE</span><span>架空の飲食グループの読みものです。料理写真は生成画像です。</span></div>
+  <header class="site-header dining-header">
+    <a class="brand" href="../"><span class="brand__mark" aria-hidden="true">街</span><span class="brand__word">街の食卓グループ</span></a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="../#brands">お店の紹介</a>
+      <a href="./" aria-current="page">読みもの</a>
+      <a class="button button--small" href="../#stores">店舗一覧</a>
+    </nav>
+  </header>
+  <main id="main" class="page-wrap journal-page">
+    <nav class="journal-breadcrumb" aria-label="パンくず"><a href="../">ホーム</a><span aria-current="page">読みもの</span></nav>
+    <h1 class="journal-title">読みもの</h1>
+    <form class="journal-filters" data-journal-filters hidden aria-label="記事を絞り込む">
+      <label>店舗<select name="store" data-journal-store><option value="all">すべての店舗</option><option value="koyori-chuo">こより 中央通り店</option><option value="koyori-ekimae">こより 駅前店</option><option value="koyori-koen">こより 公園前店</option><option value="minamo-east">みなも 東口店</option><option value="minamo-south">みなも 南町店</option><option value="tsumugi-west">つむぎ 西口店</option></select></label>
+      <label>カテゴリ<select name="category" data-journal-category><option value="all">すべてのカテゴリ</option><option value="seasonal">季節の料理</option><option value="people">お店の話</option><option value="ingredients">仕入れの話</option><option value="news">お知らせ</option></select></label>
+      <button type="reset">絞り込みを解除</button>
+    </form>
+    <p class="journal-result" data-journal-result role="status" hidden></p>
+    <div class="journal-grid"><article class="journal-card" data-journal-post data-category="seasonal" data-stores="koyori-chuo koyori-ekimae koyori-koen">
+  <a href="./koyori-autumn/">
+    <img src="../../../assets/restaurant/koyori-meal.jpg" width="506" height="506" loading="lazy" alt="焼き魚と季節の小鉢を並べた定食">
+    <div class="journal-meta"><time datetime="2026-11-18">2026.11.18 </time><span>季節の料理</span></div>
+    <h2>焼き魚のとなりに、かぼちゃの小鉢。</h2>
+    <p class="journal-card__store">こより</p>
+  </a>
+</article><article class="journal-card" data-journal-post data-category="people" data-stores="minamo-east minamo-south">
+  <a href="./minamo-morning/">
+    <img src="../../../assets/restaurant/minamo-noodles.jpg" width="506" height="506" loading="lazy" alt="澄んだだしに青菜を添えた麺">
+    <div class="journal-meta"><time datetime="2026-11-16">2026.11.16 </time><span>お店の話</span></div>
+    <h2>みなもの朝は、だしを引くところから。</h2>
+    <p class="journal-card__store">みなも</p>
+  </a>
+</article><article class="journal-card" data-journal-post data-category="ingredients" data-stores="tsumugi-west">
+  <a href="./tsumugi-mushrooms/">
+    <img src="../../../assets/restaurant/tsumugi-grill.jpg" width="506" height="506" loading="lazy" alt="炭火焼きの鶏串と野菜の盛り合わせ">
+    <div class="journal-meta"><time datetime="2026-11-14">2026.11.14 </time><span>仕入れの話</span></div>
+    <h2>炭火にのせる、秋のしいたけ。</h2>
+    <p class="journal-card__store">つむぎ</p>
+  </a>
+</article><article class="journal-card" data-journal-post data-category="people" data-stores="koyori-koen">
+  <a href="./koyori-park/">
+    <img src="../../../assets/restaurant/koyori-meal.jpg" width="506" height="506" loading="lazy" alt="ごはんと焼き魚、野菜の小鉢を盛り付けた食卓">
+    <div class="journal-meta"><time datetime="2026-11-12">2026.11.12 </time><span>お店の話</span></div>
+    <h2>公園前店の、お昼の支度。</h2>
+    <p class="journal-card__store">こより</p>
+  </a>
+</article><article class="journal-card" data-journal-post data-category="seasonal" data-stores="minamo-east minamo-south">
+  <a href="./minamo-greens/">
+    <img src="../../../assets/restaurant/minamo-noodles.jpg" width="506" height="506" loading="lazy" alt="季節の青菜と野菜を添えただし麺">
+    <div class="journal-meta"><time datetime="2026-11-10">2026.11.10 </time><span>季節の料理</span></div>
+    <h2>温かいだし麺に、季節の青菜を。</h2>
+    <p class="journal-card__store">みなも</p>
+  </a>
+</article><article class="journal-card" data-journal-post data-category="news" data-stores="tsumugi-west">
+  <a href="./tsumugi-small-plates/">
+    <img src="../../../assets/restaurant/tsumugi-grill.jpg" width="506" height="506" loading="lazy" alt="鶏串と季節の焼き野菜を並べた皿">
+    <div class="journal-meta"><time datetime="2026-11-08">2026.11.08 </time><span>お知らせ</span></div>
+    <h2>つむぎの小皿に、焼き野菜が加わりました。</h2>
+    <p class="journal-card__store">つむぎ</p>
+  </a>
+</article></div>
+    <p class="journal-empty" data-journal-empty hidden>該当する記事はありません。店舗やカテゴリを変更してご覧ください。</p>
+  </main>
+  <footer class="sample-footer dining-footer">
+    <div class="page-wrap">
+      <span class="dining-footer__name">街の食卓グループ</span>
+      <p>架空の飲食グループのサイト見本です。</p>
+      <a class="return-top" href="../../../">LPサンプル一覧へ戻る</a>
+    </div>
+  </footer>
+</body>
+</html>
