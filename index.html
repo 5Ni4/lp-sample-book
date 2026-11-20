@@ -3,193 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="デザイン、更新しやすさ、記事作成の流れまで考えた業種別LPサンプル集。">
-  <title>LPサンプルブック｜見た目から運用まで</title>
+  <meta name="description" content="飲食店、キャラクター、地域マルシェ、ネイルチップのLPサンプル集。">
+  <title>LPサンプル集｜LP SAMPLE BOOK</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/gallery.css">
   <script src="assets/site.js" defer></script>
 </head>
 <body class="theme--gallery">
   <a class="skip-link" href="#main">本文へ移動</a>
-  <div class="demo-strip"><span>LP SAMPLE BOOK</span><span>飲食店・イベント・ネイルは架空。524は販売中のLINE作品を掲載しています</span></div>
-  <header class="site-header site-header--gallery">
-    <a class="brand" href="./" aria-label="LPサンプルブック トップ">
-      <span class="brand__mark">L</span>
-      <span class="brand__word">LP SAMPLE BOOK<small>DESIGN × OPERATIONS</small></span>
-    </a>
-    <nav class="main-nav" aria-label="メインナビゲーション">
-      <a href="#samples">業種から選ぶ</a>
-      <a href="#approach">つくり方</a>
-      <a class="button button--small" href="#contact">相談のイメージ</a>
-    </nav>
+  <header class="gallery-header gallery-wrap">
+    <a class="gallery-brand" href="./" aria-label="LPサンプル集 トップ">LP SAMPLE BOOK</a>
+    <a class="gallery-nav" href="#samples">サンプル一覧</a>
   </header>
 
-  <main id="main">
-    <section class="gallery-hero page-wrap">
-      <div class="gallery-hero__copy">
-        <p class="eyebrow"><span class="eyebrow__line"></span> SMALL BUSINESS WEB DESIGN</p>
-        <h1>見た目を整えて、<br><em>更新しやすい</em><br>ページへ。</h1>
-        <p class="lead">デザインだけで終わらず、お知らせを自分たちで更新する仕組みや、記事の下書きをつくる流れまで。業種別のサンプルで、できあがりと運用の両方をご覧いただけます。</p>
-        <div class="hero-actions">
-          <a class="button" href="#samples">業種からサンプルを見る <span aria-hidden="true">↓</span></a>
-          <span class="quiet-note">飲食店・イベント・ネイルは架空の設定です。524のLINE作品はLINE STOREで購入できます。</span>
-        </div>
+  <main id="main" class="gallery-wrap">
+    <h1 class="gallery-title">LPサンプル集</h1>
+    <section id="samples" aria-label="LPサンプル一覧">
+      <div class="gallery-filters" role="group" aria-label="業種で絞り込む">
+        <button type="button" data-filter="all" aria-pressed="true" class="is-active">すべて</button>
+        <button type="button" data-filter="restaurant" aria-pressed="false">飲食・多店舗</button>
+        <button type="button" data-filter="character" aria-pressed="false">キャラクター</button>
+        <button type="button" data-filter="event" aria-pressed="false">イベント</button>
+        <button type="button" data-filter="nail" aria-pressed="false">通販</button>
       </div>
-      <div class="gallery-hero__visual" aria-label="デザイン、CMS、記事作成のつながりを表すイラスト" role="img">
-        <div class="visual-window visual-window--back">
-          <div class="window-top"><i></i><i></i><i></i><span>記事の下書き</span></div>
-          <div class="fake-lines"><b></b><b></b><b></b><b></b></div>
-          <span class="visual-tag">DRAFT</span>
-        </div>
-        <div class="visual-window visual-window--front">
-          <div class="window-top"><i></i><i></i><i></i><span>お店のホームページ</span></div>
-          <div class="fake-page">
-            <div class="fake-copy"><small>季節のお知らせ</small><strong>らしさが伝わる、<br>小さな一ページ。</strong><span></span></div>
-            <div class="fake-art"><div class="fake-sun"></div><div class="fake-hill fake-hill--one"></div><div class="fake-hill fake-hill--two"></div></div>
-          </div>
-        </div>
-        <div class="connector connector--one"><span>1</span></div>
-        <div class="connector connector--two"><span>2</span></div>
-        <p class="visual-caption">DESIGN → UPDATE → SHARE</p>
-      </div>
-    </section>
-
-    <section id="samples" class="section section--samples page-wrap">
-      <div class="section-heading section-heading--row">
-        <div>
-          <p class="eyebrow">CHOOSE A CATEGORY</p>
-          <h2>近い業種から、<br class="mobile-only">見てみてください。</h2>
-        </div>
-        <p class="section-heading__aside">目的やお客さまに合わせて、<br>ページの見せ方と更新の仕組みを組み立てます。</p>
-      </div>
-      <div class="filter-row" role="group" aria-label="業種でサンプルを絞り込む">
-        <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">すべて <span>04</span></button>
-        <button class="filter-chip" type="button" data-filter="restaurant" aria-pressed="false">飲食・多店舗 <span>01</span></button>
-        <button class="filter-chip" type="button" data-filter="character" aria-pressed="false">キャラクター・LINE <span>01</span></button>
-        <button class="filter-chip" type="button" data-filter="event" aria-pressed="false">イベント・地域 <span>01</span></button>
-        <button class="filter-chip" type="button" data-filter="nail" aria-pressed="false">通販・ネイル <span>01</span></button>
-      </div>
-      <div class="sample-grid">
-        <article class="sample-card" data-category="restaurant">
-          <a class="sample-card__link" href="sites/restaurant/" aria-label="複数店舗を運営する飲食会社のLPサンプルを見る">
-            <div class="sample-card__preview preview--restaurant" aria-hidden="true">
-              <div class="mini-browser">
-                <div class="mini-browser__top"><i></i><i></i><i></i></div>
-                <div class="mini-restaurant">
-                  <span>街の食卓グループ</span>
-                  <b>昼の定食、だしの一杯、炭火の夜。</b>
-                  <img src="assets/restaurant/group-table.jpg" width="1536" height="508" loading="lazy" alt="">
-                </div>
-              </div>
-              <span class="preview-label">DINING / LOCATIONS</span>
+      <div class="gallery-grid">
+        <article class="sample-card gallery-card" data-category="restaurant">
+          <a href="sites/restaurant/" class="gallery-card__link">
+            <div class="gallery-card__image">
+              <img src="assets/sample-previews/restaurant.png" width="1200" height="800" alt="料理写真と店舗案内を掲載した街の食卓グループのページ" fetchpriority="high">
             </div>
-            <div class="sample-card__body">
-              <div class="card-kicker"><span>飲食・多店舗</span><span>01 / 04</span></div>
-              <h3>複数店舗を運営する飲食会社</h3>
-              <p>食堂・麺処・酒場。料理の写真から、3ブランド・6店舗を選べる飲食グループのサイト。</p>
-              <div class="card-intent"><span>想定する行動</span><strong>料理から店を選ぶ</strong></div>
-              <div class="card-footer"><span>お店の紹介・店舗一覧・お知らせ</span><b aria-hidden="true">↗</b></div>
+            <div class="gallery-card__caption">
+              <h2>街の食卓グループ</h2>
+              <p>飲食・多店舗</p>
             </div>
           </a>
         </article>
-
-        <article class="sample-card" data-category="character">
-          <a class="sample-card__link" href="sites/524-line-stickers/" aria-label="524のキャラクターサイトを見る">
-            <div class="sample-card__preview preview--524" aria-hidden="true">
-              <div class="mini-browser">
-                <div class="mini-browser__top"><i></i><i></i><i></i></div>
-                <div class="mini-524">
-                  <span>R-524</span><b>524のスタンプ<br>と絵文字</b>
-                  <img src="assets/524-line-products/ukkari.webp" width="240" height="240" loading="lazy" alt="">
-                </div>
-              </div>
-              <span class="preview-label">CHARACTER / LINE</span>
+        <article class="sample-card gallery-card" data-category="character">
+          <a href="sites/524-line-stickers/" class="gallery-card__link">
+            <div class="gallery-card__image">
+              <img src="assets/sample-previews/524-line-stickers.png" width="1200" height="800" alt="黄色いキャラクター524のスタンプと絵文字のページ">
             </div>
-            <div class="sample-card__body">
-              <div class="card-kicker"><span>キャラクター・LINE</span><span>02 / 04</span></div>
-              <h3>524のキャラクターサイト</h3>
-              <p>524の紹介と、LINE STOREで販売中のスタンプ・絵文字をひとつに。</p>
-              <div class="card-intent"><span>想定する行動</span><strong>LINE作品を見る</strong></div>
-              <div class="card-footer"><span>作品一覧・送信プレビュー</span><b aria-hidden="true">↗</b></div>
+            <div class="gallery-card__caption">
+              <h2>524のスタンプと絵文字</h2>
+              <p>キャラクター</p>
             </div>
           </a>
         </article>
-
-        <article class="sample-card" data-category="event">
-          <a class="sample-card__link" href="sites/local-marche/" aria-label="地域マルシェのLPサンプルを見る">
-            <div class="sample-card__preview preview--marche" aria-hidden="true">
-              <div class="mini-browser"><div class="mini-browser__top"><i></i><i></i><i></i></div><div class="mini-marche"><span>LOCAL MARKET</span><b>まちの「好き」が<br>広場に集まる。</b><div class="mini-tents"><i></i><i></i><i></i></div></div></div>
-              <span class="preview-label">EVENT / COMMUNITY</span>
+        <article class="sample-card gallery-card" data-category="event">
+          <a href="sites/local-marche/" class="gallery-card__link">
+            <div class="gallery-card__image">
+              <img src="assets/sample-previews/local-marche.png" width="1200" height="800" alt="開催日や出店者を紹介するまちの輪マルシェのページ" loading="lazy">
             </div>
-            <div class="sample-card__body">
-              <div class="card-kicker"><span>イベント・地域</span><span>03 / 04</span></div>
-              <h3>地域マルシェ</h3>
-              <p>開催概要、出店者、会場マップをまとめて来場や出店の案内へ。</p>
-              <div class="card-intent"><span>想定する行動</span><strong>会場・出店情報を見る</strong></div>
-              <div class="card-footer"><span>イベント告知・出店案内の見本</span><b aria-hidden="true">↗</b></div>
+            <div class="gallery-card__caption">
+              <h2>まちの輪マルシェ</h2>
+              <p>イベント・地域</p>
             </div>
           </a>
         </article>
-
-        <article class="sample-card" data-category="nail">
-          <a class="sample-card__link" href="sites/nail-tips/" aria-label="ネイルチップの販売LPサンプルを見る">
-            <div class="sample-card__preview preview--nail" aria-hidden="true">
-              <div class="mini-browser">
-                <div class="mini-browser__top"><i></i><i></i><i></i></div>
-                <div class="mini-nail">
-                  <span>指先日和</span>
-                  <b>選べるネイルチップ</b>
-                  <img src="assets/nail-tips/collection.jpg" width="1536" height="510" loading="lazy" alt="">
-                </div>
-              </div>
-              <span class="preview-label">NAIL TIPS / SHOP</span>
+        <article class="sample-card gallery-card" data-category="nail">
+          <a href="sites/nail-tips/" class="gallery-card__link">
+            <div class="gallery-card__image">
+              <img src="assets/sample-previews/nail-tips.png" width="1200" height="800" alt="ネイルチップのデザインや注文方法を紹介する指先日和のページ" loading="lazy">
             </div>
-            <div class="sample-card__body">
-              <div class="card-kicker"><span>通販・ネイル</span><span>04 / 04</span></div>
-              <h3>ネイルチップの販売</h3>
-              <p>デザインとサイズを選び、送料込みの金額と注文内容を確認。</p>
-              <div class="card-intent"><span>想定する行動</span><strong>注文の流れを試す</strong></div>
-              <div class="card-footer"><span>商品一覧・決済前の注文確認</span><b aria-hidden="true">↗</b></div>
+            <div class="gallery-card__caption">
+              <h2>指先日和</h2>
+              <p>通販・ネイルチップ</p>
             </div>
           </a>
         </article>
       </div>
-      <p class="filter-empty" data-empty-state hidden>この業種のサンプルは準備中です。</p>
+      <p class="filter-empty" data-empty-state role="status" hidden>該当するサンプルはありません。</p>
     </section>
-
-    <section id="approach" class="section approach-section">
-      <div class="page-wrap">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">DESIGN THAT KEEPS WORKING</p>
-          <h2>きれいに作る。<br><em>更新しやすくする。</em></h2>
-          <p>ページを公開した後に、お知らせが古いままにならないように。<br class="desktop-only">見た目と日々の運用を、ひと続きで考えます。</p>
-        </div>
-        <div class="strength-grid">
-          <article class="strength-card"><span class="strength-num">01</span><div class="strength-icon strength-icon--design" aria-hidden="true">✳</div><h3>お店らしいデザイン</h3><p>誰に何を伝えるページかを決めて、雰囲気と読みやすさを整えます。</p><span class="strength-tag">DESIGN</span></article>
-          <article class="strength-card"><span class="strength-num">02</span><div class="strength-icon strength-icon--cms" aria-hidden="true">↻</div><h3>自分で更新できる仕組み</h3><p>お知らせや商品情報など、日々変わる部分をCMSから更新できる形に。</p><span class="strength-tag">HEADLESS CMS</span></article>
-          <article class="strength-card"><span class="strength-num">03</span><div class="strength-icon strength-icon--mcp" aria-hidden="true">✎</div><h3>記事づくりを続けやすく</h3><p>MCP連携で素材から下書きを作る流れを整え、確認してから公開できる形を目指します。</p><span class="strength-tag">MCP × CONTENT</span></article>
-        </div>
-        <div class="flow-band">
-          <div class="flow-band__intro"><span class="eyebrow">A SIMPLE CONTENT FLOW</span><h3>記事の素材から、<br>公開前の確認まで。</h3><p>自動化する部分と、人が確認する部分を分けて設計します。</p></div>
-          <ol class="flow-steps">
-            <li><span>1</span><b>素材を集める</b><small>商品・予定・写真など</small></li>
-            <li><span>2</span><b>下書きを作る</b><small>MCP連携の作成フロー</small></li>
-            <li><span>3</span><b>人が確認する</b><small>内容・表現・事実</small></li>
-            <li><span>4</span><b>CMSで公開する</b><small>担当者が最終操作</small></li>
-          </ol>
-        </div>
-        <p class="prototype-note"><b>試作品について</b> このページの操作デモは固定のサンプル文を表示します。実際のMCP、AI、Headless CMSには接続していません。導入時は使うツール、確認手順、公開操作を相談して決めます。</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section section--contact page-wrap">
-      <div class="contact-panel">
-        <div><p class="eyebrow">START WITH A SAMPLE</p><h2>見本を見ながら、<br>一緒に考えましょう。</h2><p>実際の制作では、業種だけでなく、誰に何を伝えたいか、公開後にどこを更新したいかを伺ってから範囲を決めます。</p></div>
-        <div class="contact-side"><a class="button button--light" href="#samples">もう一度サンプルを見る <span aria-hidden="true">↑</span></a><span class="quiet-note">このサンプル集には実際の問い合わせ先を設定していません。</span></div>
-      </div>
-    </section>
+    <aside class="gallery-note" aria-label="サンプルについて">
+      <p>飲食店・マルシェ・ネイルは架空のサンプルです。524は販売中の作品を掲載しています。</p>
+      <p>注文・お問い合わせは送信されません。記事作成は固定文を表示するデモです。</p>
+    </aside>
   </main>
-
-  <footer class="site-footer page-wrap"><a class="brand brand--footer" href="./"><span class="brand__mark">L</span><span class="brand__word">LP SAMPLE BOOK<small>DESIGN × OPERATIONS</small></span></a><p>架空の店舗・イベントと、524のキャラクターを題材にしたサンプル集です。</p><span>© 2026 LP Sample Book / Prototype</span></footer>
+  <footer class="gallery-footer gallery-wrap"><small>© 2026 LP SAMPLE BOOK</small></footer>
 </body>
 </html>
