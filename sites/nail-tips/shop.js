@@ -50,7 +50,7 @@ by("product-form").addEventListener("submit",event=>{
  const same=items.find(row=>row.id===selected&&row.size===size);
  if(same&&same.qty+qty>max){by("product-error").textContent="同じデザイン・サイズは最大9セットまでです。";return}
  if(same)same.qty+=qty;else items.push({id:selected,size,qty});
- renderCart();product.close();status(data[selected].name+"・サイズ"+size+"をバッグに追加しました");
+ renderCart();product.close();status(data[selected].name+"・サイズ"+size+"をカートに追加しました");
 });
 by("size-help").addEventListener("click",()=>product.close());
 by("measure").addEventListener("submit",event=>{
