@@ -1,5 +1,5 @@
 "use strict";
-const prices=Object.freeze({rose:2800,lilac:3100,pearl:3300});
+const prices=Object.freeze({rose:2800,lilac:3100,pearl:3300,french:2900,check:3200,charm:3400});
 const sizes=Object.freeze({S:[14,10,11,10,7],M:[16,11,12,11,8],L:[17,12,13,12,9]});
 const shipFee=350;
 const max=9;
