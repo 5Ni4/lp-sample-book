@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="ロゼフィルム、ライラックフォイル、パールヴェール。sumi foil（スミフォイル）は、ショートオーバルのネイルチップを揃えた架空のショップです。">
+<meta name="description" content="ロゼフィルム、ライラックフォイル、パールヴェール。mellow tips（メロウティップス）は、ショートオーバルのネイルチップを揃えた架空のショップです。">
 <meta name="theme-color" content="#f2f3f5">
-<title>sumi foil（スミフォイル）｜ネイルチップ</title>
+<title>mellow tips（メロウティップス）｜ネイルチップ</title>
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="shop.css">
 <script src="shop.js" defer></script>
@@ -14,9 +14,9 @@
 <a class="skip" href="#main">本文へ移動</a>
 <p class="notice">SHOP DEMO <span>架空のお店です。実際の注文・決済はできません。</span></p>
 <header class="header shell">
-<a class="brand" href="#main">sumi foil<span>スミフォイル</span></a>
+<a class="brand" href="#main">mellow tips<span>メロウティップス</span></a>
 <nav aria-label="メインメニュー"><a href="#collection">デザイン</a><a href="#fit">サイズ</a><a href="#info">ご利用案内</a></nav>
-<a class="basket btn" href="#bag">バッグ <span id="count">0</span></a>
+<a class="basket btn" href="#bag">カート <span id="count">0</span></a>
 </header>
 <main id="main">
 <section class="hero shell" aria-labelledby="hero-title">
@@ -37,15 +37,15 @@
 <div class="size-box"><table><caption>サイズ表・チップの横幅（mm）</caption><thead><tr><th scope="col">サイズ</th><th scope="col">親指</th><th scope="col">人差し指</th><th scope="col">中指</th><th scope="col">薬指</th><th scope="col">小指</th></tr></thead><tbody id="size-rows"><tr><th scope="row">S</th><td>14</td><td>10</td><td>11</td><td>10</td><td>7</td></tr><tr><th scope="row">M</th><td>16</td><td>11</td><td>12</td><td>11</td><td>8</td></tr><tr><th scope="row">L</th><td>17</td><td>12</td><td>13</td><td>12</td><td>9</td></tr></tbody></table>
 <form id="measure"><fieldset disabled><legend>5本の幅から、サイズの目安を調べる</legend><div class="fingers"><label>親指<input name="thumb" type="number" min="1" max="30" step="0.1" inputmode="decimal" required></label><label>人差し指<input name="index" type="number" min="1" max="30" step="0.1" inputmode="decimal" required></label><label>中指<input name="middle" type="number" min="1" max="30" step="0.1" inputmode="decimal" required></label><label>薬指<input name="ring" type="number" min="1" max="30" step="0.1" inputmode="decimal" required></label><label>小指<input name="pinky" type="number" min="1" max="30" step="0.1" inputmode="decimal" required></label></div><button class="btn outline" type="submit">サイズを調べる</button><p id="fit-result" class="fine" role="status"></p></fieldset></form>
 </div></div></section>
-<section class="section shell" id="bag" aria-labelledby="bag-title"><div class="sect-head"><div><p class="eyebrow">SHOPPING BAG</p><h2 id="bag-title">バッグ</h2></div><p>ここから注文確認まで試せます。</p></div>
-<div class="bag-grid"><div><p id="cart-empty">バッグは空です。デザインを選ぶところから始めてください。</p><ul id="cart-lines"></ul><a href="#collection" class="text-link">デザインを見る ↗</a></div><div class="summary"><dl><div><dt>商品小計</dt><dd id="sub">¥0</dd></div><div><dt>送料</dt><dd id="shipping">¥0</dd></div><div class="grand"><dt>合計（税込）</dt><dd id="total">¥0</dd></div></dl><button class="btn solid" id="review-btn" type="button" disabled>注文内容を確認する</button><p class="fine">個人情報、配送先、カード情報は入力しません。</p></div></div>
+<section class="section shell" id="bag" aria-labelledby="bag-title"><div class="sect-head"><div><p class="eyebrow">SHOPPING CART</p><h2 id="bag-title">カート</h2></div><p>ここから注文確認まで試せます。</p></div>
+<div class="bag-grid"><div><p id="cart-empty">カートは空です。デザインを選ぶところから始めてください。</p><ul id="cart-lines"></ul><a href="#collection" class="text-link">デザインを見る ↗</a></div><div class="summary"><dl><div><dt>商品小計</dt><dd id="sub">¥0</dd></div><div><dt>送料</dt><dd id="shipping">¥0</dd></div><div class="grand"><dt>合計（税込）</dt><dd id="total">¥0</dd></div></dl><button class="btn solid" id="review-btn" type="button" disabled>注文内容を確認する</button><p class="fine">個人情報、配送先、カード情報は入力しません。</p></div></div>
 <p class="visually-hidden" id="cart-status" role="status"></p>
 <noscript><p>サイズ診断・注文デモを試すには、JavaScriptを有効にしてください。</p></noscript>
 </section>
 <section class="section info" id="info" aria-labelledby="info-title"><div class="shell"><p class="eyebrow">GOOD TO KNOW</p><h2 id="info-title">はじめての方へ</h2><details><summary>セットに入っているものは？</summary><p>チップ左右10枚、粘着シール、ミニやすり。すべて見本の内容です。商品画像はこの制作サンプル用に生成したイメージです。</p></details><details><summary>送料と発送の目安は？</summary><p>送料は全国一律350円、発送は5〜7営業日の設定例です。このサイトでは発送しません。</p></details><details><summary>実際に注文や支払いはできますか？</summary><p>できません。商品の選択、合計の計算、注文確認までを体験するデモです。データの送信や保存は行いません。</p></details></div></section>
 </main>
-<footer class="footer"><div class="shell"><a class="brand" href="#main">sumi foil<span>スミフォイル</span></a><a href="../../index.html">制作サンプル一覧 ↗</a></div></footer>
-<dialog id="product-dialog" aria-labelledby="product-title"><button class="close" type="button" data-close aria-label="閉じる">×</button><div class="dialog-grid"><img id="product-image" width="800" height="800" alt=""><div class="dialog-content"><p class="eyebrow">SELECT YOUR SIZE</p><h2 id="product-title"></h2><p id="product-description"></p><p id="product-price" class="product-price"></p><form id="product-form"><label for="product-size">サイズ</label><select id="product-size" required><option value="">選択してください</option><option>S</option><option>M</option><option>L</option></select><a href="#fit" id="size-help" class="text-link">サイズ表を見る ↗</a><label for="product-qty">数量</label><select id="product-qty"><option value="1">1セット</option><option value="2">2セット</option><option value="3">3セット</option></select><button class="btn solid" type="submit">バッグに入れる</button><p id="product-error" class="fine" role="alert"></p></form></div></div></dialog>
+<footer class="footer"><div class="shell"><a class="brand" href="#main">mellow tips<span>メロウティップス</span></a></div></footer>
+<dialog id="product-dialog" aria-labelledby="product-title"><button class="close" type="button" data-close aria-label="閉じる">×</button><div class="dialog-grid"><img id="product-image" width="800" height="800" alt=""><div class="dialog-content"><p class="eyebrow">SELECT YOUR SIZE</p><h2 id="product-title"></h2><p id="product-description"></p><p id="product-price" class="product-price"></p><form id="product-form"><label for="product-size">サイズ</label><select id="product-size" required><option value="">選択してください</option><option>S</option><option>M</option><option>L</option></select><a href="#fit" id="size-help" class="text-link">サイズ表を見る ↗</a><label for="product-qty">数量</label><select id="product-qty"><option value="1">1セット</option><option value="2">2セット</option><option value="3">3セット</option></select><button class="btn solid" type="submit">カートに入れる</button><p id="product-error" class="fine" role="alert"></p></form></div></div></dialog>
 <dialog id="review-dialog" aria-labelledby="review-title"><button class="close" type="button" data-close aria-label="閉じる">×</button><div class="dialog-content checkout"><p class="eyebrow">ORDER PREVIEW</p><h2 id="review-title">注文内容の確認</h2><ul id="review-lines"></ul><p id="review-total" class="product-price"></p><p>この先に決済サービスは接続していません。</p><button class="btn solid" id="finish-demo" type="button">デモを完了する</button><p id="demo-result" role="status"></p></div></dialog>
 </body>
 </html>
