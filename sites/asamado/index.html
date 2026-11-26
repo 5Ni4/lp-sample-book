@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f7f2e7">
-<meta name="description" content="パン屋 あさまど。焼き上がりの時間、定番のパン、お店の案内がひと目で分かる架空の街のパン屋の制作例。">
+<meta name="theme-color" content="#f5ead7">
+<meta name="robots" content="noindex">
+<meta name="description" content="朝8時から。定番のパンと日々の焼き上がり、営業日をご案内します。">
 <title>パン屋 あさまど | 街の小さなベーカリー</title>
 <link rel="stylesheet" href="style.css">
 <script src="bakery.js" defer></script>
@@ -15,12 +16,12 @@
 <main id="main">
 <section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero-copy"><p class="overline"><span></span> はじまりのページ</p><h1 id="hero-title">あさのまちに、<br>パンがやけた。</h1><p>まだしずかな小道に、バターの香りがふわり。あさまどの窓に、きょう最初のパンが並びます。</p><a class="button" href="#bakes">焼き上がりを見る <span aria-hidden="true">↓</span></a></div>
-<figure class="hero-picture"><img src="photos/story-window.webp" width="1440" height="960" alt="朝の小道にあるパン屋。明かりのついた窓のそばに自転車がとまっている絵"><figcaption>あさ、まどに明かりがともる。</figcaption></figure>
+<figure class="hero-picture"><img src="photos/morning-dough.webp" width="1440" height="960" alt="天板にクロワッサンの生地を並べる手元"><figcaption>朝いちばんの天板。</figcaption></figure>
 </section>
 <div class="shopline"><div class="wrap line-content"><span><b>営業時間</b> 8:00–17:00</span><span><b>定休日</b> 月・火</span><span>売り切れ次第終了</span></div></div>
 <section id="bakes" class="wrap bakes" aria-labelledby="bakes-title">
-<div class="section-head"><div><p class="overline">第1話 ・ パンがやけるころ</p><h2 id="bakes-title">焼き上がり</h2></div><p>時間は目安です。<br>生地の発酵によって前後します。</p></div>
-<div class="schedule">
+<div class="section-head"><div><p class="overline">第1話 ・ パンがやけるころ</p><h2 id="bakes-title">焼き上がり</h2></div><p>発酵のすすみ具合で、<br>少しお待たせすることも。</p></div>
+<div class="schedule" aria-label="オーブンから出る時間">
 <article><p class="clock">08:00</p><h3>クロワッサン</h3><p>開店に合わせて。コーヒーのおともに。</p><a href="#croissant">パンを見る ↗</a></article>
 <article><p class="clock">10:30</p><h3>カンパーニュ</h3><p>昼に合わせて焼く、食事に合う丸パン。</p><a href="#campagne">パンを見る ↗</a></article>
 <article><p class="clock">13:00</p><h3>塩バターロール</h3><p>午後の便。おやつや、帰り道のひとつに。</p><a href="#salt-roll">パンを見る ↗</a></article>
@@ -35,17 +36,24 @@
 </div><p class="tax">表示価格は税込です。</p>
 </div></section>
 <section id="calendar" class="wrap calendar" aria-labelledby="calendar-title">
-<div class="section-head"><div><p class="overline">第3話 ・ お店をあける日</p><h2 id="calendar-title">営業カレンダー</h2></div><p>月・火はお休み。<br>営業時間は8:00〜17:00です。</p></div>
+<div class="section-head"><div><p class="overline">第3話 ・ お店をあける日</p><h2 id="calendar-title">営業カレンダー</h2></div><p>月・火はお休み。<br>東中野本店の営業日です。</p></div>
 <div class="calendar-panel"><div class="month-bar" id="month-controls" hidden><button id="prev-month" type="button" aria-label="前の月">‹</button><p id="month-label" aria-live="polite"></p><button id="next-month" type="button" aria-label="次の月">›</button></div><p id="calendar-fallback">水〜日 8:00〜17:00、月・火定休。</p><table id="month-grid" hidden><caption class="sr-only">営業日。休印は定休日です。</caption><thead><tr><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr></thead><tbody></tbody></table><p class="calendar-key">「休」は定休日。売り切れ次第終了。</p></div>
 </section>
 <section class="journal-band" aria-labelledby="journal-title"><div class="wrap"><div><p class="overline">第4話 ・ まどべの便り</p><h2 id="journal-title">パン屋の便り</h2><p>小さなお知らせと、パンをおいしく食べる話。</p></div><a class="button" href="./blog/">ブログを読む <span aria-hidden="true">↗</span></a></div></section>
 <section id="shop" class="wrap visit" aria-labelledby="shop-title">
-<div><p class="overline">おしまいのページ</p><h2 id="shop-title">お店の案内</h2><p>朝の散歩にも、午後のおやつにも。</p>
-<dl><div><dt>営業時間</dt><dd>8:00–17:00（売り切れ次第終了）</dd></div><div><dt>定休日</dt><dd>月曜日・火曜日</dd></div><div><dt>エリア</dt><dd>東京・東中野（作例設定）</dd></div></dl>
-<a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%B8%AD%E9%87%8E%E9%A7%85" target="_blank" rel="noopener noreferrer">東中野駅を地図で見る <span aria-hidden="true">↗</span></a></div>
-<aside class="faq"><h3>ご来店前に</h3><details><summary>焼き上がりは何時ごろ？</summary><p>クロワッサンは8時、カンパーニュは10時半、塩バターロールは13時ごろが目安です。</p></details><details><summary>営業中でも売り切れることはありますか？</summary><p>はい。パンがすべて売り切れた日は、17時より前に閉店します。</p></details><details><summary>これは実在するお店ですか？</summary><p>いいえ。パンの情報や来店までの案内をまとめた、架空店舗のWeb制作例です。</p></details></aside>
+<div class="section-head store-heading"><div><p class="overline">おしまいのページ</p><h2 id="shop-title">あさまどの店</h2></div><p>はじまりは東中野。<br>それぞれの街にも、小さな窓を。</p></div>
+<div class="store-board">
+<div class="shops-list">
+<article class="store-card flagship"><span>01 ・ 本店</span><h3>東中野本店</h3><p>朝8:00〜17:00 ／ 月・火休み</p></article>
+<article class="store-card"><span>02 ・ 姉妹店</span><h3>西荻窪店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
+<article class="store-card"><span>03 ・ 姉妹店</span><h3>代々木上原店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
+<article class="store-card"><span>04 ・ 姉妹店</span><h3>清澄白河店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
+</div>
+<figure class="shop-map"><img src="photos/shop-map.svg" width="600" height="412" loading="lazy" alt="西から西荻窪、東中野、代々木上原、清澄白河の4店を描いた案内図"><figcaption>4つの街と、4つの窓。</figcaption></figure>
+</div>
+<aside class="faq"><h3>よくある質問</h3><details><summary>焼き上がりは何時ごろ？</summary><p>東中野本店では、クロワッサンは8時、カンパーニュは10時半、塩バターロールは13時ごろが目安です。</p></details><details><summary>営業中でも売り切れることはありますか？</summary><p>はい。パンがすべて売り切れた日は、17時より前に閉店します。</p></details></aside>
 </section>
 </main>
-<footer class="footer"><div class="wrap"><span class="footer-name">パン屋 あさまど</span><p>架空店舗の制作サンプルです。営業・販売は行っていません。</p><a href="#main">先頭へ ↑</a></div></footer>
+<footer class="footer"><div class="wrap"><span class="footer-name">パン屋 あさまど</span><a href="#main">先頭へ ↑</a></div></footer>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 412" width="600" height="412">
+<defs><pattern id="paper" width="12" height="11" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".5" fill="#b69268" opacity=".23"/><circle cx="7" cy="9" r=".55" fill="#a77c51" opacity=".17"/></pattern><g id="shop" stroke="#664531" stroke-width="2.6" stroke-linejoin="round"><path d="M-17 17v-24l17-15 17 15v24z" fill="#f3d7ae"/><path d="M-21 -6 0-23 21-6M-7 17v-16h10v16M8 0h6v9H8z" fill="none"/><path d="M-18-5h36" stroke="#9a4e36" stroke-width="5"/></g></defs>
+<rect width="600" height="412" fill="#f6e9d1"/><rect width="600" height="412" fill="url(#paper)"/>
+<path d="M465 1c-16 43 14 81-7 135-23 60 7 96-13 147-10 24-24 55-19 129h84c-9-42-2-82 11-112 20-46-11-80 10-133 21-51-3-117 11-165z" fill="#dce1cd"/>
+<path d="M491 0c-14 49 11 92-11 149-22 55 8 94-13 145-11 27-22 58-15 118" stroke="#a1ab88" fill="none" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M0 112q93-31 175 15t214-10q116-25 211 27M14 261q86-20 192 14t180-5 214-16M164 0q-8 69 22 149t-35 146q-9 58 8 117M369 0q-20 129 12 206t-17 206" fill="none" stroke="#e1ccaa" stroke-width="14"/>
+<path d="M0 112q93-31 175 15t214-10q116-25 211 27M14 261q86-20 192 14t180-5 214-16" fill="none" stroke="#fcf4e2" stroke-width="8"/>
+<path d="M93 141q69 10 172-53m-4 6q-33 53 5 161m1-4q101-81 224-55" fill="none" stroke="#a85f44" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="2 9"/>
+<g fill="#93a285" stroke="#687151" stroke-width="2"><path d="M44 76l9-16 9 16h-18zm291 236 10-18 10 18zm65-239 9-14 9 14zm142 252 9-14 9 14z"/><circle cx="71" cy="303" r="7"/><circle cx="80" cy="319" r="6"/><circle cx="325" cy="67" r="7"/></g>
+<use href="#shop" x="92" y="141"/><use href="#shop" x="267" y="91"/><use href="#shop" x="266" y="252"/><use href="#shop" x="492" y="200"/>
+<g text-anchor="middle" fill="#4e3829" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-weight="700"><text x="91" y="185" font-size="25">西荻窪</text><text x="266" y="137" font-size="28" fill="#793e2d">東中野 本店</text><text x="263" y="299" font-size="25">代々木上原</text><text x="493" y="245" font-size="25">清澄白河</text></g>
+<g transform="translate(55 355)" fill="none" stroke="#793e2d" stroke-width="2"><path d="M-14 0q14-25 28 0-7 14-14 12-7 2-14-12z"/><path d="M-5-8q-1 6-5 8m11-11q-1 8-5 14m11-11q-1 8-5 14"/></g>
+<text x="81" y="363" fill="#634937" font-family="Hiragino Mincho ProN, Yu Mincho, serif" font-size="18">あさまどの地図</text>
+</svg>

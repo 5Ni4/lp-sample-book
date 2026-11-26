@@ -21,5 +21,4 @@ fetch("./posts.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error();return 
    a.append(el("p",postLine(p),"post-tag"),h,el("p",p.summary));list.append(a);
   }root.append(list);if(!d.posts.length)root.append(el("p","現在、公開中の記事はありません。"));
  }
- if(d.source==="sample")root.append(el("p","掲載記事は作例です。","bread-notice"));
 }).catch(()=>{status.textContent="記事を読み込めませんでした。時間をおいてもう一度お試しください。";});
