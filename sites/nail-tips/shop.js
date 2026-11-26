@@ -68,7 +68,7 @@ by("review-btn").addEventListener("click",()=>{
  by("finish-demo").disabled=false;by("demo-result").textContent="";review.showModal();
 });
 by("finish-demo").addEventListener("click",()=>{
- by("finish-demo").disabled=true;by("demo-result").textContent="デモ完了。注文や決済は発生せず、情報も送信していません。";
+ by("finish-demo").disabled=true;by("demo-result").textContent="確認が完了しました。注文や決済は発生せず、情報も送信していません。";
 });
 document.querySelectorAll("[data-close]").forEach(b=>b.addEventListener("click",()=>b.closest("dialog").close()));
 renderCart();
