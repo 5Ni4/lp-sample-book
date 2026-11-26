@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7f2e7">
+<meta name="description" content="パン屋 あさまど。焼き上がりの時間、定番のパン、お店の案内がひと目で分かる架空の街のパン屋の制作例。">
+<title>パン屋 あさまど | 街の小さなベーカリー</title>
+<link rel="stylesheet" href="style.css">
+<script src="bakery.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="mast wrap"><a class="logo" href="./" aria-label="パン屋 あさまど トップ"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M6 38V16a16 16 0 0 1 32 0v22ZM22 2v36M6 22h32" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><small>パン屋</small>あさまど</span></a><nav aria-label="ページ内メニュー"><a href="#bakes">焼き上がり</a><a href="#bread">パン</a><a href="#shop">お店の案内</a></nav></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="hero-title">
+<div class="hero-copy"><p class="overline"><span></span> ASAMADO BAKERY</p><h1 id="hero-title">朝の道に、<br>パンの香り。</h1><p>出かける前のクロワッサン。夕飯に切り分けるカンパーニュ。いつもの道で、焼きたてのパンを。</p><a class="button" href="#bakes">焼き上がりを見る <span aria-hidden="true">↓</span></a></div>
+<figure class="hero-picture"><img src="photos/counter.webp" width="1440" height="960" alt="朝の光が差す木のカウンターに、クロワッサンとカンパーニュ"><figcaption>THE MORNING COUNTER</figcaption></figure>
+</section>
+<div class="shopline"><div class="wrap line-content"><span><b>営業時間</b> 8:00–17:00</span><span><b>定休日</b> 月・火</span><span>売り切れ次第終了</span></div></div>
+<section id="bakes" class="wrap bakes" aria-labelledby="bakes-title">
+<div class="section-head"><div><p class="overline">01 / FROM THE OVEN</p><h2 id="bakes-title">焼き上がり</h2></div><p>時間は目安です。<br>生地の発酵によって前後します。</p></div>
+<div class="schedule">
+<article><p class="clock">08:00</p><h3>クロワッサン</h3><p>開店に合わせて。コーヒーのおともに。</p><a href="#croissant">パンを見る ↗</a></article>
+<article><p class="clock">10:30</p><h3>カンパーニュ</h3><p>昼に合わせて焼く、食事に合う丸パン。</p><a href="#campagne">パンを見る ↗</a></article>
+<article><p class="clock">13:00</p><h3>塩バターロール</h3><p>午後の便。おやつや、帰り道のひとつに。</p><a href="#salt-roll">パンを見る ↗</a></article>
+</div>
+</section>
+<section id="bread" class="bread" aria-labelledby="bread-title"><div class="wrap">
+<div class="section-head"><div><p class="overline">02 / THE BREAD</p><h2 id="bread-title">いつものパン</h2></div><p>朝・昼・おやつで選べる、<br>あさまどの定番。</p></div>
+<div class="bread-grid">
+<article id="croissant" class="bread-card"><img src="photos/croissant.webp" width="640" height="640" loading="lazy" alt="層がふくらんだ黄金色のクロワッサン"><div class="item"><h3>クロワッサン</h3><span>¥320</span></div><p>外はさくっと、中はしっとり。発酵バターの香りを楽しむ一品。</p></article>
+<article id="campagne" class="bread-card"><img src="photos/campagne.webp" width="640" height="640" loading="lazy" alt="表面に粉をふった丸いカンパーニュ"><div class="item"><h3>カンパーニュ</h3><span>¥760</span></div><p>香ばしい皮ともっちりした中身。厚めに切って、スープと一緒に。</p></article>
+<article id="salt-roll" class="bread-card"><img src="photos/salt-roll.webp" width="640" height="640" loading="lazy" alt="表面に塩をのせた焼き色の濃いバターロール"><div class="item"><h3>塩バターロール</h3><span>¥220</span></div><p>底のカリッとした部分までおいしい。軽く温めるとバターが香る。</p></article>
+</div><p class="tax">表示価格は税込です。</p>
+</div></section>
+<section id="shop" class="wrap visit" aria-labelledby="shop-title">
+<div><p class="overline">03 / VISIT US</p><h2 id="shop-title">お店の案内</h2><p>朝の散歩にも、午後のおやつにも。</p>
+<dl><div><dt>営業時間</dt><dd>8:00–17:00（売り切れ次第終了）</dd></div><div><dt>定休日</dt><dd>月曜日・火曜日</dd></div><div><dt>エリア</dt><dd>東京・東中野（作例設定）</dd></div></dl>
+<a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%B8%AD%E9%87%8E%E9%A7%85" target="_blank" rel="noopener noreferrer">東中野駅を地図で見る <span aria-hidden="true">↗</span></a></div>
+<aside class="faq"><h3>ご来店前に</h3><details><summary>焼き上がりは何時ごろ？</summary><p>クロワッサンは8時、カンパーニュは10時半、塩バターロールは13時ごろが目安です。</p></details><details><summary>営業中でも売り切れることはありますか？</summary><p>はい。パンがすべて売り切れた日は、17時より前に閉店します。</p></details><details><summary>これは実在するお店ですか？</summary><p>いいえ。パンの情報や来店までの案内をまとめた、架空店舗のWeb制作例です。</p></details></aside>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><span class="footer-name">パン屋 あさまど</span><p>架空店舗の制作サンプルです。営業・販売は行っていません。</p><a href="#main">先頭へ ↑</a></div></footer>
+</body>
+</html>
