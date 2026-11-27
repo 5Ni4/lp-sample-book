@@ -9,25 +9,37 @@
 <title>パン屋 あさまど | 街の小さなベーカリー</title>
 <link rel="stylesheet" href="style.css">
 <style>
-/* Calendar only: a shop note on paper, with a readable date grid. */
-.calendar .month-bar p{font-family:"Klee One","YuKyokasho","YuKyokasho Yoko","UD Digi Kyokasho N-R","Yu Mincho",serif;font-size:clamp(1.08rem,3.8vw,1.42rem);letter-spacing:.08em;margin:0}
-.calendar #month-grid{border-collapse:separate;border-spacing:clamp(2px,.6vw,5px);color:#392c24}
-.calendar #month-grid td{height:clamp(36px,8vw,55px);padding-top:5px;background:#fffaf0;border:1px solid #b49b7c;border-radius:3px 5px 4px 6px}
-.calendar #month-grid td.closed{background:#e8e9d5}
-.calendar #month-grid td.empty{background:transparent;border-color:transparent}
-.calendar #month-grid .date{font-family:"Klee One","YuKyokasho","Comic Sans MS","Yu Mincho",serif;font-size:1.04em}
-.calendar .calendar-key{color:#65432e}
+/* Shop bulletin: restrained paper, quiet date rows, one handwritten rest mark. */
+.calendar .calendar-panel{max-width:100%;padding:clamp(15px,4vw,40px);background:#fbf3e3;border:1px solid #bb9a72;border-radius:2px;box-shadow:none;display:grid;grid-template-columns:minmax(130px,.7fr) minmax(0,2fr);gap:clamp(20px,5vw,65px);align-items:start}
+.calendar .calendar-panel::before{display:none}
+.calendar .calendar-note{border-top:2px solid #a56c48;padding-top:11px;color:#4e3728}
+.calendar .calendar-note p{margin:0 0 8px}.calendar .calendar-note strong{display:block;font:600 clamp(1.2rem,3vw,1.6rem) "Yu Mincho","Hiragino Mincho ProN",serif}
+.calendar .calendar-note .hours{font-size:.9rem;line-height:1.7}
+.calendar .calendar-note .rule{color:#8a3527;font-size:.83rem}
+.calendar .month-bar{margin:0 0 4px;gap:6px}.calendar .month-bar p{margin:0;color:#422a1e;font:600 clamp(1.15rem,4vw,1.7rem) "YuKyokasho","Yu Mincho",serif;letter-spacing:.065em}
+.calendar .month-bar button{font-size:1.45rem;border:none;border-radius:50%;background:transparent;color:#763722}
+.calendar .month-bar button:hover{background:#efddc3}
+.calendar #month-grid{border-collapse:collapse;text-align:center;color:#3b2a20;line-height:1}
+.calendar #month-grid th{border:0;border-bottom:1px solid #a88668;height:32px;color:#685140}
+.calendar #month-grid th:nth-child(-n+2){color:#913c2b}
+.calendar #month-grid td{height:clamp(40px,6vw,57px);vertical-align:middle;border:0;border-bottom:1px solid #d3bea4;background:none!important;padding:2px 0}
+.calendar #month-grid .date{font:600 clamp(.88rem,2.2vw,1.11rem) Georgia,serif;font-variant-numeric:tabular-nums;line-height:1}
+.calendar #month-grid .closed .date{color:#83523d}
+.calendar #month-grid .closed .rest{display:table;border:1px solid #a0523a;border-radius:48% 39% 50% 43%;color:#8a3527;background:none;margin:2px auto 0;line-height:1.1;padding:0 3px;transform:rotate(-10deg);font-family:"YuKyokasho","Yu Mincho",serif}
+.calendar #month-grid .today .date{background:#8a402c;color:#fff9ed;border-radius:100%;padding:3px 5px}
+.calendar .calendar-key{color:#644b39;margin:12px 0 0}.calendar #calendar-fallback{margin:8px 0}
 .visit>.shops-list{gap:clamp(10px,2.5vw,24px)}
+@media(max-width:620px){.calendar .calendar-panel{grid-template-columns:minmax(0,1fr);gap:12px}.calendar .calendar-note{padding-top:7px}.calendar .calendar-note p{margin-bottom:3px}.calendar .calendar-note strong{display:inline}.calendar #month-grid td{height:40px}}
 </style>
 <script src="bakery.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
-<header class="mast wrap"><a class="logo" href="./" aria-label="パン屋 あさまど トップ"><svg aria-hidden="true" viewBox="0 0 44 44"><path d="M6 38V16a16 16 0 0 1 32 0v22ZM22 2v36M6 22h32" fill="none" stroke="currentColor" stroke-width="2"/></svg><span><small>パン屋</small>あさまど</span></a><nav aria-label="ページ内メニュー"><a href="#bakes">焼き上がり</a><a href="#bread">パン</a><a href="#calendar">営業日</a><a href="./blog/">ブログ</a><a href="#shop">お店の案内</a></nav></header>
+<header class="mast wrap"><a class="logo" href="./" aria-label="パン屋 あさまど トップ"><svg aria-hidden="true" viewBox="0 0 44 44" width="44" height="44"><g stroke="#a45a2d" stroke-linecap="round" stroke-width="1.5" fill="none"><path d="M22 5v4M12 8l2.6 3M32 8l-2.6 3M7 15l3.5 1.5M37 15l-3.5 1.5"/><path fill="#edbc67" d="M14 19a8 8 0 0 1 16 0z"/></g><path fill="#d4904c" stroke="#84462e" stroke-width="1.35" stroke-linejoin="round" d="M5 34c2-7 9-13 17-13s15 6 17 13l-5.4-2.1c-2.1 1.6-5.1 2.7-11.6 2.7s-9.5-1.1-11.6-2.7Z"/><g fill="none" stroke="#84462e" stroke-width="1.25" stroke-linecap="round"><path d="M13 26c1.1 2.5 2 4.4 4.4 7.6M31 26c-1.1 2.5-2 4.4-4.4 7.6M22 21.6v12.8"/></g><path d="M11 38c7 .8 15 .7 22 0" fill="none" stroke="#a45a2d" stroke-width="1.25" stroke-linecap="round"/></svg><span><small>パン屋</small>あさまど</span></a><nav aria-label="ページ内メニュー"><a href="#bakes">焼き上がり</a><a href="#bread">パン</a><a href="#calendar">営業日</a><a href="./blog/">ブログ</a><a href="#shop">店舗一覧</a></nav></header>
 <main id="main">
 <section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero-copy"><h1 id="hero-title">あさのまちに、<br>パンがやけた。</h1><p>まだしずかな小道に、バターの香りがふわり。あさまどの窓に、きょう最初のパンが並びます。</p><a class="button" href="#bakes">焼き上がりを見る <span aria-hidden="true">↓</span></a></div>
-<figure class="hero-picture"><img src="photos/morning-dough.webp" width="1440" height="960" alt="天板にクロワッサンの生地を並べる手元"><figcaption>朝いちばんの天板。</figcaption></figure>
+<figure class="hero-picture"><img src="photos/morning-dough.webp" width="1440" height="960" alt="天板にクロワッサンの生地を並べる手元"></figure>
 </section>
 <div class="shopline"><div class="wrap line-content"><span><b>営業時間</b> 8:00–17:00</span><span><b>定休日</b> 月・火</span><span>売り切れ次第終了</span></div></div>
 <section id="bakes" class="wrap bakes" aria-labelledby="bakes-title">
@@ -47,19 +59,18 @@
 </div><p class="tax">表示価格は税込です。</p>
 </div></section>
 <section id="calendar" class="wrap calendar" aria-labelledby="calendar-title">
-<div class="section-head"><div><h2 id="calendar-title">営業カレンダー</h2></div><p>月・火はお休み。<br>東中野本店の営業日です。</p></div>
-<div class="calendar-panel"><div class="month-bar" id="month-controls" hidden><button id="prev-month" type="button" aria-label="前の月">‹</button><p id="month-label" aria-live="polite"></p><button id="next-month" type="button" aria-label="次の月">›</button></div><p id="calendar-fallback">水〜日 8:00〜17:00、月・火定休。</p><table id="month-grid" hidden><caption class="sr-only">営業日。休印は定休日です。</caption><thead><tr><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr></thead><tbody></tbody></table><p class="calendar-key">「休」は定休日。売り切れ次第終了。</p></div>
+<div class="section-head"><div><h2 id="calendar-title">営業カレンダー</h2></div></div>
+<div class="calendar-panel"><div class="calendar-note"><p><strong>東中野本店</strong></p><p class="hours">水〜日　8:00〜17:00</p><p class="rule">月・火 定休</p></div><div class="calendar-sheet"><div class="month-bar" id="month-controls" hidden><button id="prev-month" type="button" aria-label="前の月">‹</button><p id="month-label" aria-live="polite"></p><button id="next-month" type="button" aria-label="次の月">›</button></div><p id="calendar-fallback">水〜日 8:00〜17:00、月・火定休。</p><table id="month-grid" hidden><caption class="sr-only">営業日。休印は定休日です。</caption><thead><tr><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr></thead><tbody></tbody></table><p class="calendar-key">「休」の印は定休日。売り切れ次第終了。</p></div></div>
 </section>
 <section class="journal-band" aria-labelledby="journal-title"><div class="wrap"><div><h2 id="journal-title">パン屋の便り</h2><p>小さなお知らせと、パンをおいしく食べる話。</p></div><a class="button" href="./blog/">ブログを読む <span aria-hidden="true">↗</span></a></div></section>
 <section id="shop" class="wrap visit" aria-labelledby="shop-title">
-<div class="section-head store-heading"><div><h2 id="shop-title">あさまどの店</h2></div><p>はじまりは東中野。<br>それぞれの街にも、小さな窓を。</p></div>
+<div class="section-head store-heading"><div><h2 id="shop-title">店舗一覧</h2></div><p>はじまりは東中野。<br>それぞれの街にも、小さな窓を。</p></div>
 <div class="shops-list">
 <article class="store-card flagship"><span>01 ・ 本店</span><h3>東中野本店</h3><p>朝8:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>02 ・ 姉妹店</span><h3>西荻窪店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>03 ・ 姉妹店</span><h3>代々木上原店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>04 ・ 姉妹店</span><h3>清澄白河店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 </div>
-<aside class="faq"><h3>よくある質問</h3><details><summary>焼き上がりは何時ごろ？</summary><p>東中野本店では、クロワッサンは8時、カンパーニュは10時半、塩バターロールは13時ごろが目安です。</p></details><details><summary>営業中でも売り切れることはありますか？</summary><p>はい。パンがすべて売り切れた日は、17時より前に閉店します。</p></details></aside>
 </section>
 </main>
 <footer class="footer"><div class="wrap"><span class="footer-name">パン屋 あさまど</span><a href="#main">先頭へ ↑</a></div></footer>
