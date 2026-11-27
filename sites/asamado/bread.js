@@ -17,7 +17,8 @@ const breadCatalog=[
     "bakeTime": "06:00",
     "category": "パン",
     "description": "耳までやわらかく、トーストにも。",
-    "image": "bread-shokupan.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 10
   },
   {
     "id": "anpan",
@@ -26,7 +27,8 @@ const breadCatalog=[
     "bakeTime": "06:00",
     "category": "パン",
     "description": "つぶあんを、ふんわりした生地で包みました。",
-    "image": "bread-anpan.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 9
   },
   {
     "id": "melon",
@@ -35,7 +37,8 @@ const breadCatalog=[
     "bakeTime": "08:30",
     "category": "パン",
     "description": "格子模様のクッキー生地はさくさく。",
-    "image": "bread-melon.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 1
   },
   {
     "id": "chocolat",
@@ -44,7 +47,8 @@ const breadCatalog=[
     "bakeTime": "08:30",
     "category": "パン",
     "description": "ほろ苦いチョコをバターの層で包んだパン。",
-    "image": "bread-chocolat.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 5
   },
   {
     "id": "cinnamon",
@@ -53,7 +57,8 @@ const breadCatalog=[
     "bakeTime": "08:30",
     "category": "パン",
     "description": "ほどよい甘さとシナモンの香り。",
-    "image": "bread-cinnamon.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 6
   },
   {
     "id": "campagne",
@@ -71,7 +76,8 @@ const breadCatalog=[
     "bakeTime": "10:30",
     "category": "サンド",
     "description": "まろやかなたまごを、やわらかい食パンで。",
-    "image": "bread-egg.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 0
   },
   {
     "id": "ham",
@@ -80,7 +86,8 @@ const breadCatalog=[
     "bakeTime": "10:30",
     "category": "サンド",
     "description": "歯切れのいいバゲットに、ハムとレタス。",
-    "image": "bread-ham.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 8
   },
   {
     "id": "focaccia",
@@ -89,7 +96,8 @@ const breadCatalog=[
     "bakeTime": "10:30",
     "category": "パン",
     "description": "甘く焼いた玉ねぎとハーブ。",
-    "image": "bread-focaccia.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 11
   },
   {
     "id": "salt-roll",
@@ -107,7 +115,8 @@ const breadCatalog=[
     "bakeTime": "13:00",
     "category": "パン",
     "description": "ウインナーに、粒マスタードを少し。",
-    "image": "bread-sausage.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 7
   },
   {
     "id": "canelé",
@@ -116,7 +125,8 @@ const breadCatalog=[
     "bakeTime": "13:00",
     "category": "焼き菓子",
     "description": "外はカリッと、中はもっちり。",
-    "image": "bread-canele.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 2
   },
   {
     "id": "financier",
@@ -125,7 +135,8 @@ const breadCatalog=[
     "bakeTime": "13:00",
     "category": "焼き菓子",
     "description": "焦がしバターとアーモンドが香る。",
-    "image": "bread-financier.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 3
   },
   {
     "id": "matcha",
@@ -134,7 +145,8 @@ const breadCatalog=[
     "bakeTime": "13:00",
     "category": "焼き菓子",
     "description": "ほろ苦い抹茶に、ミルキーな甘さ。",
-    "image": "bread-matcha.webp"
+    "image": "bread-drawings.svg",
+    "imageTile": 4
   }
 ];
 const breadBase=new URL(".",document.currentScript.src);
@@ -146,5 +158,13 @@ if(schedule){
  const rows=[...slots].sort(([a],[b])=>a.localeCompare(b)).map(([time,items])=>{const row=node("article"),title=node("h3",intro[time]||"焼き上がり"),line=node("p","","bake-items");for(const [i,p] of items.entries()){if(i)line.append(node("span","・","bake-divider"));const a=node("a",p.name);a.href=new URL("menu/#"+encodeURIComponent(p.id),breadBase).href;line.append(a);}const clock=node("time",time,"clock");clock.dateTime=time;row.append(clock,title,line);return row;});
  schedule.replaceChildren(...rows);
 }
+const menuPhoto=p=>{
+ const img=node("img");img.src=new URL("photos/"+p.image,breadBase).href;img.alt="";img.loading="lazy";img.decoding="async";
+ if(!Number.isInteger(p.imageTile)){img.width=640;img.height=640;img.addEventListener("error",()=>img.remove(),{once:true});return img;}
+ const frame=node("div","","menu-drawing");Object.assign(frame.style,{position:"relative",aspectRatio:"1 / 1",borderRadius:"50%",overflow:"hidden",border:"1px solid #b49168",background:"#faf1e1"});
+ const cell=node("div");Object.assign(cell.style,{position:"absolute",left:"7.5%",width:"85%",height:"100%",overflow:"hidden"});
+ Object.assign(img.style,{position:"absolute",maxWidth:"none",width:"400%",aspectRatio:"auto",height:"auto",border:"0",borderRadius:"0",left:-(p.imageTile%4)*100+"%",top:-(Math.floor(p.imageTile/4)*113.3333+6.6667)+"%"});
+ cell.append(img);frame.append(cell);img.addEventListener("error",()=>frame.remove(),{once:true});return frame;
+};
 const menu=document.querySelector("#all-breads");
-if(menu){for(const p of breadCatalog){const card=node("article","","menu-item");card.id=p.id; const img=node("img");img.src=new URL("photos/"+p.image,breadBase).href;img.alt="";img.width=640;img.height=640;img.loading="lazy";img.decoding="async";img.addEventListener("error",()=>{img.remove();},{once:true});const meta=node("p",p.category+" ・ "+p.bakeTime,"menu-meta"),heading=node("h2",p.name),line=node("div","","menu-title");line.append(heading,node("span","¥"+p.price));card.append(img,meta,line,node("p",p.description,"menu-description"));menu.append(card);}}
+if(menu){for(const p of breadCatalog){const card=node("article","","menu-item");card.id=p.id; const img=menuPhoto(p);const meta=node("p",p.category+" ・ "+p.bakeTime,"menu-meta"),heading=node("h2",p.name),line=node("div","","menu-title");line.append(heading,node("span","¥"+p.price));card.append(img,meta,line,node("p",p.description,"menu-description"));menu.append(card);}}
