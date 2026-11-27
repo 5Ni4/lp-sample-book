@@ -8,6 +8,17 @@
 <meta name="description" content="朝8時から。定番のパンと日々の焼き上がり、営業日をご案内します。">
 <title>パン屋 あさまど | 街の小さなベーカリー</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Calendar only: a shop note on paper, with a readable date grid. */
+.calendar .month-bar p{font-family:"Klee One","YuKyokasho","YuKyokasho Yoko","UD Digi Kyokasho N-R","Yu Mincho",serif;font-size:clamp(1.08rem,3.8vw,1.42rem);letter-spacing:.08em;margin:0}
+.calendar #month-grid{border-collapse:separate;border-spacing:clamp(2px,.6vw,5px);color:#392c24}
+.calendar #month-grid td{height:clamp(36px,8vw,55px);padding-top:5px;background:#fffaf0;border:1px solid #b49b7c;border-radius:3px 5px 4px 6px}
+.calendar #month-grid td.closed{background:#e8e9d5}
+.calendar #month-grid td.empty{background:transparent;border-color:transparent}
+.calendar #month-grid .date{font-family:"Klee One","YuKyokasho","Comic Sans MS","Yu Mincho",serif;font-size:1.04em}
+.calendar .calendar-key{color:#65432e}
+.visit>.shops-list{gap:clamp(10px,2.5vw,24px)}
+</style>
 <script src="bakery.js" defer></script>
 </head>
 <body>
@@ -42,14 +53,11 @@
 <section class="journal-band" aria-labelledby="journal-title"><div class="wrap"><div><p class="overline">第4話 ・ まどべの便り</p><h2 id="journal-title">パン屋の便り</h2><p>小さなお知らせと、パンをおいしく食べる話。</p></div><a class="button" href="./blog/">ブログを読む <span aria-hidden="true">↗</span></a></div></section>
 <section id="shop" class="wrap visit" aria-labelledby="shop-title">
 <div class="section-head store-heading"><div><p class="overline">おしまいのページ</p><h2 id="shop-title">あさまどの店</h2></div><p>はじまりは東中野。<br>それぞれの街にも、小さな窓を。</p></div>
-<div class="store-board">
 <div class="shops-list">
 <article class="store-card flagship"><span>01 ・ 本店</span><h3>東中野本店</h3><p>朝8:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>02 ・ 姉妹店</span><h3>西荻窪店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>03 ・ 姉妹店</span><h3>代々木上原店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>04 ・ 姉妹店</span><h3>清澄白河店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
-</div>
-<figure class="shop-map"><img src="photos/shop-map.svg" width="600" height="412" loading="lazy" alt="西から西荻窪、東中野、代々木上原、清澄白河の4店を描いた案内図"><figcaption>4つの街と、4つの窓。</figcaption></figure>
 </div>
 <aside class="faq"><h3>よくある質問</h3><details><summary>焼き上がりは何時ごろ？</summary><p>東中野本店では、クロワッサンは8時、カンパーニュは10時半、塩バターロールは13時ごろが目安です。</p></details><details><summary>営業中でも売り切れることはありますか？</summary><p>はい。パンがすべて売り切れた日は、17時より前に閉店します。</p></details></aside>
 </section>
