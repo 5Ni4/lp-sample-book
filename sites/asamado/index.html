@@ -8,6 +8,7 @@
 <meta name="description" content="朝8時から。定番のパンと日々の焼き上がり、営業日をご案内します。">
 <title>パン屋 あさまど | 街の小さなベーカリー</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&amp;display=swap">
 <style>
 /* Shop bulletin: restrained paper, quiet date rows, one handwritten rest mark. */
 .calendar .calendar-panel{max-width:100%;padding:clamp(15px,4vw,40px);background:#fbf3e3;border:1px solid #bb9a72;border-radius:2px;box-shadow:none;display:grid;grid-template-columns:minmax(130px,.7fr) minmax(0,2fr);gap:clamp(20px,5vw,65px);align-items:start}
@@ -41,8 +42,10 @@
 .bakes .schedule article:last-child{border-bottom:0}.bakes .schedule article::after{content:none}
 .bakes .schedule .clock{grid-column:1;grid-row:1 / span 3;color:#f6d39a;font-size:clamp(1.7rem,6vw,3.05rem);line-height:1.13;font-variant-numeric:tabular-nums}
 .bakes .schedule h3,.bakes .schedule article>p:not(.clock),.bakes .schedule a{grid-column:2;color:#fff3df;margin:0}.bakes .schedule h3{font-size:clamp(1.05rem,3vw,1.28rem)}.bakes .schedule a{width:fit-content;color:#f6d39a}.bakes .schedule a:focus-visible{outline:2px solid #ffe3ab}
+.bakes .schedule,.bakes .schedule .clock,.bakes .schedule h3,.bakes .schedule a{font-family:"Klee One","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;font-weight:600}.bakes .schedule .clock{letter-spacing:0}.bakes .schedule .bake-items{line-height:1.85;font-size:clamp(.89rem,2.4vw,1.03rem);margin-top:3px}.bakes .schedule .bake-items a{display:inline;color:#fff3df;text-decoration-color:#cdaa82}.bakes .schedule .bake-divider{color:#e6b87c}.bread-more{margin-top:15px}
 </style>
 <script src="bakery.js" defer></script>
+<script src="bread.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -67,7 +70,7 @@
 <article id="croissant" class="bread-card"><img src="photos/story-croissant.webp" width="640" height="640" loading="lazy" alt="層がふくらんだ黄金色のクロワッサン"><div class="item"><h3>クロワッサン</h3><span>¥320</span></div><p>外はさくっと、中はしっとり。発酵バターの香りを楽しむ一品。</p></article>
 <article id="campagne" class="bread-card"><img src="photos/story-campagne.webp" width="640" height="640" loading="lazy" alt="表面に粉をふった丸いカンパーニュ"><div class="item"><h3>カンパーニュ</h3><span>¥760</span></div><p>香ばしい皮ともっちりした中身。厚めに切って、スープと一緒に。</p></article>
 <article id="salt-roll" class="bread-card"><img src="photos/story-salt-roll.webp" width="640" height="640" loading="lazy" alt="表面に塩をのせた焼き色の濃いバターロール"><div class="item"><h3>塩バターロール</h3><span>¥220</span></div><p>底のカリッとした部分までおいしい。軽く温めるとバターが香る。</p></article>
-</div><p class="tax">表示価格は税込です。</p>
+</div><p class="tax">表示価格は税込です。</p><a class="button bread-more" href="./menu/">すべてのパンを見る <span aria-hidden="true">→</span></a>
 </div></section>
 <section id="calendar" class="wrap calendar" aria-labelledby="calendar-title">
 <div class="section-head"><div><h2 id="calendar-title">営業カレンダー</h2></div></div>
