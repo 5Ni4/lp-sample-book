@@ -69,6 +69,16 @@
       "width": 1200,
       "height": 800,
       "alt": "黄色いキャラクター524のスタンプと絵文字のページ"
+    },
+    {
+      "slug": "kissa-azuma",
+      "category": "restaurant",
+      "title": "喫茶アズマ",
+      "caption": "飲食・Instagramの実投稿を埋め込んだ作例",
+      "image": "assets/sample-previews/kissa-azuma.svg",
+      "width": 960,
+      "height": 640,
+      "alt": "喫茶アズマのカップを描いた看板風の作例画像"
     }
   ],
   "unlisted": []
