@@ -30,6 +30,8 @@
 .calendar .calendar-key{color:#644b39;margin:12px 0 0}.calendar #calendar-fallback{margin:8px 0}
 .visit>.shops-list{gap:clamp(10px,2.5vw,24px)}
 @media(max-width:620px){.calendar .calendar-panel{grid-template-columns:minmax(0,1fr);gap:12px}.calendar .calendar-note{padding-top:7px}.calendar .calendar-note p{margin-bottom:3px}.calendar .calendar-note strong{display:inline}.calendar #month-grid td{height:40px}}
+.visit>.shops-list{grid-template-columns:repeat(3,minmax(0,1fr))}.visit .flagship{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(170px,1fr);gap:clamp(12px,4vw,38px);align-items:center;padding:clamp(12px,3vw,23px)}.flagship-picture{margin:0;min-width:0}.flagship-picture img{width:100%;height:auto;max-height:400px;object-fit:cover;display:block}.flagship-picture figcaption{font-size:.76rem;color:#6b4936;margin-top:5px}.visit .flagship h3{font-size:clamp(1.35rem,3vw,2rem)}.bread-card img{aspect-ratio:3/2;object-fit:cover}
+@media(max-width:620px){.visit>.shops-list{grid-template-columns:1fr}.visit .flagship{grid-template-columns:minmax(0,1fr);gap:13px}}
 </style>
 <script src="bakery.js" defer></script>
 </head>
@@ -39,7 +41,7 @@
 <main id="main">
 <section class="hero wrap" aria-labelledby="hero-title">
 <div class="hero-copy"><h1 id="hero-title">あさのまちに、<br>パンがやけた。</h1><p>まだしずかな小道に、バターの香りがふわり。あさまどの窓に、きょう最初のパンが並びます。</p><a class="button" href="#bakes">焼き上がりを見る <span aria-hidden="true">↓</span></a></div>
-<figure class="hero-picture"><img src="photos/morning-dough.webp" width="1440" height="960" alt="天板にクロワッサンの生地を並べる手元"></figure>
+<figure class="hero-picture"><img src="photos/illustrated-hero.webp" width="1060" height="707" alt="天板にクロワッサンの生地を並べる手元を描いたイラスト"></figure>
 </section>
 <div class="shopline"><div class="wrap line-content"><span><b>営業時間</b> 8:00–17:00</span><span><b>定休日</b> 月・火</span><span>売り切れ次第終了</span></div></div>
 <section id="bakes" class="wrap bakes" aria-labelledby="bakes-title">
@@ -53,9 +55,9 @@
 <section id="bread" class="bread" aria-labelledby="bread-title"><div class="wrap">
 <div class="section-head"><div><h2 id="bread-title">いつものパン</h2></div><p>朝・昼・おやつで選べる、<br>あさまどの定番。</p></div>
 <div class="bread-grid">
-<article id="croissant" class="bread-card"><img src="photos/story-croissant.webp" width="640" height="640" loading="lazy" alt="層がふくらんだ黄金色のクロワッサン"><div class="item"><h3>クロワッサン</h3><span>¥320</span></div><p>外はさくっと、中はしっとり。発酵バターの香りを楽しむ一品。</p></article>
-<article id="campagne" class="bread-card"><img src="photos/story-campagne.webp" width="640" height="640" loading="lazy" alt="表面に粉をふった丸いカンパーニュ"><div class="item"><h3>カンパーニュ</h3><span>¥760</span></div><p>香ばしい皮ともっちりした中身。厚めに切って、スープと一緒に。</p></article>
-<article id="salt-roll" class="bread-card"><img src="photos/story-salt-roll.webp" width="640" height="640" loading="lazy" alt="表面に塩をのせた焼き色の濃いバターロール"><div class="item"><h3>塩バターロール</h3><span>¥220</span></div><p>底のカリッとした部分までおいしい。軽く温めるとバターが香る。</p></article>
+<article id="croissant" class="bread-card"><img src="photos/illustrated-croissant.webp" width="690" height="460" loading="lazy" alt="層がふくらんだ黄金色のクロワッサン"><div class="item"><h3>クロワッサン</h3><span>¥320</span></div><p>外はさくっと、中はしっとり。発酵バターの香りを楽しむ一品。</p></article>
+<article id="campagne" class="bread-card"><img src="photos/illustrated-campagne.webp" width="690" height="460" loading="lazy" alt="表面に粉をふった丸いカンパーニュ"><div class="item"><h3>カンパーニュ</h3><span>¥760</span></div><p>香ばしい皮ともっちりした中身。厚めに切って、スープと一緒に。</p></article>
+<article id="salt-roll" class="bread-card"><img src="photos/illustrated-salt.webp" width="690" height="460" loading="lazy" alt="表面に塩をのせた焼き色の濃いバターロール"><div class="item"><h3>塩バターロール</h3><span>¥220</span></div><p>底のカリッとした部分までおいしい。軽く温めるとバターが香る。</p></article>
 </div><p class="tax">表示価格は税込です。</p>
 </div></section>
 <section id="calendar" class="wrap calendar" aria-labelledby="calendar-title">
@@ -66,7 +68,7 @@
 <section id="shop" class="wrap visit" aria-labelledby="shop-title">
 <div class="section-head store-heading"><div><h2 id="shop-title">店舗一覧</h2></div><p>はじまりは東中野。<br>それぞれの街にも、小さな窓を。</p></div>
 <div class="shops-list">
-<article class="store-card flagship"><span>01 ・ 本店</span><h3>東中野本店</h3><p>朝8:00〜17:00 ／ 月・火休み</p></article>
+<article class="store-card flagship"><figure class="flagship-picture"><img src="photos/fictional-store-exterior.webp" width="1020" height="680" loading="lazy" alt="木の引き戸と大きな窓がある、架空のあさまど東中野本店の外観"><figcaption>架空店舗のイメージ</figcaption></figure><div><span>01 ・ 本店</span><h3>東中野本店</h3><p>朝8:00〜17:00 ／ 月・火休み</p></div></article>
 <article class="store-card"><span>02 ・ 姉妹店</span><h3>西荻窪店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>03 ・ 姉妹店</span><h3>代々木上原店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
 <article class="store-card"><span>04 ・ 姉妹店</span><h3>清澄白河店</h3><p>朝9:00〜17:00 ／ 月・火休み</p></article>
