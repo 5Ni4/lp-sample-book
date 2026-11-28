@@ -6,8 +6,9 @@
 <meta name="robots" content="noindex">
 <title>喫茶アズマ | サンプル</title>
 <meta name="description" content="架空の喫茶店「喫茶アズマ」のWebサイト作例。">
-<link rel="stylesheet" href="style.css?v=editorial1">
+<link rel="stylesheet" href="style.css?v=motion1">
 <script defer src="instagram.js"></script>
+<script defer src="motion.js?v=motion1"></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -21,17 +22,17 @@
     <a class="jump" href="#instagram">喫茶の写真を見る <span aria-hidden="true">↓</span></a>
   </div>
   <figure class="hero">
-    <img src="window-coffee.webp" width="1440" height="960" alt="木のテーブルに差す午後の光と、ソーサーに載った一杯のコーヒー" fetchpriority="high">
+    <div class="hero-image"><img src="window-coffee.webp" width="1440" height="960" alt="木のテーブルに差す午後の光と、ソーサーに載った一杯のコーヒー" fetchpriority="high"></div>
     <figcaption><span>午後の窓辺</span><span>イメージ写真</span></figcaption>
   </figure>
 </section>
 <section class="shell about" aria-labelledby="about-title">
   <p class="eyebrow" lang="en">01 / ABOUT</p>
-  <div><h2 id="about-title">窓辺で過ごす午後</h2><p>あたたかいコーヒーと、静かに過ごせる席。<br>窓から入る光と一緒に、午後のひとときを。</p></div>
+  <div data-arrival><h2 id="about-title">窓辺で過ごす午後</h2><p>あたたかいコーヒーと、静かに過ごせる席。<br>窓から入る光と一緒に、午後のひとときを。</p></div>
 </section>
 <section id="instagram" class="social" aria-labelledby="instagram-title">
   <div class="shell social-inner">
-    <header class="social-head"><div><p class="eyebrow" lang="en">02 / FROM INSTAGRAM</p><h2 id="instagram-title">今日の一皿</h2></div><a href="https://www.instagram.com/eos_kurogoma/" rel="noopener noreferrer">撮影：@eos_kurogoma ↗</a></header>
+    <header class="social-head"><div data-arrival><p class="eyebrow" lang="en">02 / FROM INSTAGRAM</p><h2 id="instagram-title">今日の一皿</h2></div><a href="https://www.instagram.com/eos_kurogoma/" rel="noopener noreferrer">撮影：@eos_kurogoma ↗</a></header>
     <p class="fine">撮影者が訪ねたカフェの写真です。喫茶アズマの店舗・商品ではありません。</p>
     <div class="posts" id="posts" aria-live="polite"></div>
     <noscript><p><a href="https://www.instagram.com/eos_kurogoma/">Instagramで写真を見る</a></p></noscript>
