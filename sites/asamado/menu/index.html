@@ -43,8 +43,10 @@
 .menu-taste{appearance:none;display:block;position:relative;grid-column:1;grid-row:1;align-self:center;min-width:0;width:100%;padding:0;border:0;border-radius:43% 48% 39% 45%;background:transparent;cursor:pointer}
 .menu-taste:focus-visible{outline:2px solid #79513a;outline-offset:4px}
 .menu-taste .menu-thumbnail{display:block}
-.menu-taste[data-bite] .menu-art{clip-path:url(#asamado-bite-cut)}
-.menu-taste[data-bite] .menu-drawing,.menu-taste[data-bite] .menu-thumbnail>img{clip-path:url(#asamado-bite-cut)}
+.menu-taste[data-bite="1"]{--bite-cut:url(#asamado-bite-1)}
+.menu-taste[data-bite="2"]{--bite-cut:url(#asamado-bite-2)}
+.menu-taste[data-bite="3"]{--bite-cut:url(#asamado-bite-3)}
+.menu-taste[data-bite] :is(.menu-art,.menu-drawing,.menu-thumbnail>img){clip-path:var(--bite-cut)}
 .menu-taste[data-bite]::after{content:"";pointer-events:none;position:absolute;width:2%;aspect-ratio:1;top:41%;left:77%;border-radius:40% 60% 53% 47%;background:#aa6735;box-shadow:.45em -.2em 0 -.02em #c89257,-.16em .65em 0 -.02em #b5773b;transform:rotate(-18deg)}
 .menu-se-credit{font-size:.72rem;color:#675748;margin-top:1rem}
 .menu-se-credit a{color:inherit;text-underline-offset:.2em}
@@ -52,7 +54,7 @@
 </style>
 </head>
 <body>
-<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><clipPath id="asamado-bite-cut" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.28H.88Q.80 .27 .80 .35Q.70 .34 .71 .43Q.60 .44 .64 .53Q.64 .61 .73 .60Q.75 .68 .83 .64Q.86 .72 .94 .68H1V1H0Z"/></clipPath></defs></svg>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><clipPath id="asamado-bite-1" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.28H.88Q.80 .27 .80 .35Q.70 .34 .71 .43Q.60 .44 .64 .53Q.64 .61 .73 .60Q.75 .68 .83 .64Q.86 .72 .94 .68H1V1H0Z"/></clipPath><clipPath id="asamado-bite-2" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.20H.83Q.73 .17 .72 .26Q.59 .22 .61 .34Q.49 .32 .51 .44Q.41 .48 .47 .57Q.45 .67 .56 .67Q.57 .76 .68 .74Q.72 .85 .82 .81Q.89 .88 1 .84V1H0Z"/></clipPath><clipPath id="asamado-bite-3" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.11H.73Q.62 .08 .61 .19Q.49 .13 .48 .25Q.38 .20 .38 .34Q.27 .32 .31 .45Q.22 .50 .29 .60Q.24 .70 .36 .73Q.34 .83 .47 .83Q.49 .94 .61 .91Q.72 .99 .84 .95H1V1H0Z"/></clipPath></defs></svg>
 <header class="mast wrap"><a class="logo" href="../" aria-label="パン屋 あさまど トップ"><svg aria-hidden="true" viewBox="0 0 52 52" width="52" height="52"><g stroke="#a3542b" stroke-linecap="round" stroke-width="1.45"><circle cx="34" cy="18" r="6.3" fill="#edbe6a"/><path d="M34 7v2.4m0 17.2V29M23 18h2.3m17.4 0H45M26.2 10.3l1.7 1.7m12.2 12.2 1.7 1.7m0-15.6-1.7 1.7" fill="none"/></g><path d="M21.8 10.2C12.6 10.9 7.2 18 7.1 26.1c-.1 9.1 6.7 15.9 16 16.2 6.8.2 12-3.2 15-8.4-4.7 1.5-10 .8-14-2.5-5.6-4.6-7.1-12.2-2.3-21.2Z" fill="#dd9b55" stroke="#83482f" stroke-width="1.4" stroke-linejoin="round"/><g fill="none" stroke="#95552f" stroke-width="1.15" stroke-linecap="round"><path d="M11.3 16.9c2.1.8 4 1.4 6.6 2.3m-10.4 7.3c3.8-.5 7.4-1.5 10.5-2.7m-6.9 12.6c4.2-2.3 7.5-4.8 9.7-8m-1.6 13.3c2.1-2.9 4-5.8 5.2-9.4m4.3 9.5c.8-2.7 1.4-5.1 1.3-7.1"/></g></svg><span><small>パン屋</small>あさまど</span></a><nav aria-label="メインメニュー"><a href="../#bakes">焼き上がり</a><a href="./" aria-current="page">パン</a><a href="../#calendar">営業日</a><a href="../blog/">ブログ</a><a href="../#shop">店舗一覧</a></nav></header>
 <main class="wrap bread-menu">
 <a class="back" href="../#bread">‹ お店のページに戻る</a>
@@ -60,6 +62,7 @@
 <nav class="menu-categories" aria-label="おしながきの分類">
 <a href="#menu-bread">パン</a><a href="#menu-sandwich">サンド</a><a href="#menu-sweets">焼き菓子</a>
 </nav>
+<p class="menu-note">イラストを押すと、ひとくち。三口のあとにもう一度押すと元に戻ります。</p>
 <div id="menu-entries"></div>
 <p class="menu-note">価格は税込です。</p>
 <p class="menu-se-credit">効果音：<a href="https://otologic.jp/free/se/motion-eating01.html">OtoLogic「モーション 食べる02-1」</a>（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>、無音部分・音量を調整）</p>
@@ -73,29 +76,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const prices = new Intl.NumberFormat("ja-JP");
   const biteAudio = new Audio("../audio/otologic-motion-eating02-1.mp3");
   biteAudio.preload = "auto";
-  let activeTaste = null;
   function tasteButton(product, illustration) {
     const button = node("button","","menu-taste");
     button.type = "button";
-    button.setAttribute("aria-label", product.name + "をひとくち");
-    button.setAttribute("aria-pressed", "false");
     button.append(illustration);
+    const bites = ["一口目", "二口目", "三口目"];
+    let eaten = 0;
+    function show(level) {
+      if (level) button.setAttribute("data-bite", String(level));
+      else button.removeAttribute("data-bite");
+    }
+    function announceNext() {
+      const action = eaten === 3 ? "を元に戻す" : "をかじる（" + bites[eaten] + "）";
+      button.setAttribute("aria-label", product.name + action);
+    }
+    announceNext();
     button.addEventListener("pointerenter", event => {
-      if (event.pointerType === "mouse") button.setAttribute("data-bite", "");
+      if (event.pointerType === "mouse") show(Math.min(eaten + 1, 3));
     });
-    button.addEventListener("pointerleave", () => {
-      if (activeTaste !== button) button.removeAttribute("data-bite");
-    });
+    button.addEventListener("pointerleave", () => show(eaten));
     button.addEventListener("click", () => {
-      const isReset = activeTaste === button;
-      if (activeTaste) {
-        activeTaste.setAttribute("aria-pressed", "false");
-        activeTaste.removeAttribute("data-bite");
-      }
-      activeTaste = isReset ? null : button;
-      if (isReset) return;
-      button.setAttribute("aria-pressed", "true");
-      button.setAttribute("data-bite", "");
+      eaten = (eaten + 1) % 4;
+      show(eaten);
+      announceNext();
+      if (!eaten) return;
       try {
         biteAudio.currentTime = 0;
         biteAudio.play()?.catch(() => {});
