@@ -8,10 +8,21 @@
 <meta name="description" content="東中野本店は朝6時から。定番のパンと日々の焼き上がり、営業日をご案内します。">
 <title>パン屋 あさまど | 街の小さなベーカリー</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yomogi&amp;text=%E7%84%BC%E3%81%8D%E4%B8%8A%E3%81%8C%E3%82%8A&amp;display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&amp;display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Darumadrop+One&amp;text=0123456789%3A&amp;display=swap">
 <style>
+@font-face{font-family:"Asamado Daruma";src:url("fonts/asamado-clock.woff") format("woff");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+30,U+31,U+32,U+33,U+34,U+35,U+36,U+37,U+38,U+39,U+3A}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-75-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+62B9}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-83-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+7C92}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-93-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+5869}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-104-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+8336}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-107-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+7389}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-111-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+578B}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-114-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+5C71,U+98DF}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-116-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+30E2}
+@font-face{font-family:"Asamado Zen Maru";src:url("fonts/zen-maru-gothic-119-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;unicode-range:U+30AF,U+30ED,U+30EF,U+30C3,U+30B5,U+30F3,U+30D1,U+3042,U+3093,U+3071,U+30E1,U+30FB,U+30AA,U+30B7,U+30E7,U+30B3,U+30E9,U+30CA,U+30FC,U+30EB,U+30AB,U+30CB,U+30E5,U+305F,U+307E,U+3054,U+30C9,U+30CF,U+30E0,U+3068,U+30EC,U+30BF,U+30B9,U+306E,U+30D0,U+30B2,U+30C8,U+306D,U+304E,U+30D5,U+30A9,U+30C1,U+30E3,U+30A6,U+30A4,U+30CC,U+30A3,U+30A7,U+30DB}
+@font-face{font-family:"Asamado Yomogi";src:url("fonts/yomogi-106-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+713C}
+@font-face{font-family:"Asamado Yomogi";src:url("fonts/yomogi-117-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+4E0A}
+@font-face{font-family:"Asamado Yomogi";src:url("fonts/yomogi-119-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+304D,U+304C,U+308A}
+
 /* Shop bulletin: restrained paper, quiet date rows, one handwritten rest mark. */
 .calendar .calendar-panel{max-width:100%;padding:clamp(15px,4vw,40px);background:#fbf3e3;border:1px solid #bb9a72;border-radius:2px;box-shadow:none;display:grid;grid-template-columns:minmax(130px,.7fr) minmax(0,2fr);gap:clamp(20px,5vw,65px);align-items:start}
 .calendar .calendar-panel::before{display:none}
@@ -44,8 +55,8 @@
 .bakes .schedule article:last-child{border-bottom:0}.bakes .schedule article::after{content:none}
 .bakes .schedule .clock{grid-column:1;grid-row:1;color:#f6d39a;font-size:clamp(1.7rem,6vw,3.05rem);line-height:1.13;font-variant-numeric:tabular-nums}
 .bakes .schedule h3,.bakes .schedule article>p:not(.clock),.bakes .schedule a{grid-column:2;color:#fff3df;margin:0}.bakes .schedule h3{font-size:clamp(1.05rem,3vw,1.28rem)}.bakes .schedule a{width:fit-content;color:#f6d39a}.bakes .schedule a:focus-visible{outline:2px solid #ffe3ab}
-#bakes #bakes-title{font-family:"Yomogi","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;font-weight:400}
-.bakes .schedule{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;font-weight:500}.bakes .schedule .clock{font-family:"Darumadrop One",system-ui,"Hiragino Sans","Yu Gothic",sans-serif;font-weight:400;letter-spacing:0}.bakes .schedule h3{display:none}.bakes .schedule .bake-items{display:flex;flex-wrap:wrap;align-items:baseline;gap:.32em .65em;line-height:1.5;margin-top:0;min-width:0}.bakes .schedule .bake-items a{display:inline-block;color:#fff3df;text-decoration-color:#cdaa82;text-underline-offset:.25em;max-width:100%;overflow-wrap:anywhere}.bakes .schedule .bake-items a{font-family:inherit;font-size:clamp(.99rem,2.65vw,1.20rem);font-weight:700;line-height:1.5}.bakes .schedule .bake-divider{display:none}.bread-more{margin-top:15px}
+#bakes #bakes-title{font-family:"Asamado Yomogi","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;font-weight:400}
+.bakes .schedule{font-family:"Asamado Zen Maru","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;font-weight:500}.bakes .schedule .clock{font-family:"Asamado Daruma",system-ui,"Hiragino Sans","Yu Gothic",sans-serif;font-weight:400;letter-spacing:0}.bakes .schedule h3{display:none}.bakes .schedule .bake-items{display:flex;flex-wrap:wrap;align-items:baseline;gap:.32em .65em;line-height:1.5;margin-top:0;min-width:0}.bakes .schedule .bake-items a{display:inline-block;color:#fff3df;text-decoration-color:#cdaa82;text-underline-offset:.25em;max-width:100%;overflow-wrap:anywhere}.bakes .schedule .bake-items a{font-family:inherit;font-size:clamp(.99rem,2.65vw,1.20rem);font-weight:700;line-height:1.5}.bakes .schedule .bake-divider{display:none}.bread-more{margin-top:15px}
 
 /* Keep the flagship card as-is. Each sister shop opens natively via its whole summary. */
 .visit .shops-list{align-items:start}
