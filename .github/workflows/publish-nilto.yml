@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # CMS edits do not push to GitHub; refresh the published feed on a timer.
+  schedule:
+    - cron: '7,22,37,52 * * * *'
 
 permissions:
   contents: read
