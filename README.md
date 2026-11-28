@@ -21,7 +21,7 @@
 
 仕事用アカウントの[制作テスト](https://cms.nilto.com/770421477/contents)に、モデル「飲食グループの読みもの」（LUID `restaurant_journal`）を作成しています。タイトル・URL名・導入文・掲載日・メイン画像・本文・カテゴリ・掲載店舗を編集できます。本文はフレキシブルテキストです。URL名には英小文字・数字・ハイフン・アンダースコアを使用し、ほかの記事と重複させないでください。
 
-公開後、[Publish NILTO articles](https://github.com/5Ni4/lp-sample-book/actions/workflows/publish-nilto.yml)から「Run workflow」を実行すると、公開記事を取得し、一覧・記事本文・トップの最新3件を更新します。下書きはサイトに掲載されません。非公開にした記事は次の反映時に一覧・記事ページから除かれます。メイン画像を省略した場合は、選択した店舗の料理写真を表示します。
+NILTOで公開すると、[Publish NILTO articles](https://github.com/5Ni4/lp-sample-book/actions/workflows/publish-nilto.yml)が約15分間隔で公開記事を確認し、一覧・記事本文・トップの最新3件を更新します。GitHub Actionsの混雑時は遅れることがあります。急ぎの場合は同じ画面の「Run workflow」でも反映できます。下書きはサイトに掲載されません。非公開にした記事は次の反映時に一覧・記事ページから除かれます。メイン画像を省略した場合は、選択した店舗の料理写真を表示します。
 
 公開データ専用キーはGitHub Actionsシークレット `NILTO_PUBLIC_API_KEY` に保存しています。キーはサイトのHTMLやJavaScriptに含めません。API取得や記事の検査に失敗した場合は公開処理を止め、直前の公開版を保持します。
 
