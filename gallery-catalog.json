@@ -1,6 +1,56 @@
 {
   "listed": [
     {
+      "slug": "524-line-stickers",
+      "category": "character",
+      "title": "524のスタンプと絵文字",
+      "caption": "キャラクター",
+      "image": "assets/sample-previews/524-line-stickers.png",
+      "width": 1200,
+      "height": 800,
+      "alt": "黄色いキャラクター524のスタンプと絵文字のページ"
+    },
+    {
+      "slug": "asamado",
+      "category": "restaurant",
+      "title": "パン屋 あさまど",
+      "caption": "飲食・営業カレンダー・ブログ",
+      "image": "sites/asamado/photos/morning-dough.webp",
+      "width": 1440,
+      "height": 960,
+      "alt": "天板にクロワッサンの生地を並べる手元"
+    },
+    {
+      "slug": "restaurant",
+      "category": "restaurant",
+      "title": "街の食卓グループ",
+      "caption": "飲食・多店舗・ブログ",
+      "image": "assets/sample-previews/restaurant.png",
+      "width": 1200,
+      "height": 800,
+      "alt": "料理写真と店舗案内を掲載した街の食卓グループのページ"
+    },
+    {
+      "slug": "kissa-azuma",
+      "category": "restaurant",
+      "title": "喫茶アズマ",
+      "caption": "飲食・Instagramの実投稿を埋め込んだ作例",
+      "image": "assets/sample-previews/kissa-azuma.svg",
+      "width": 960,
+      "height": 640,
+      "alt": "喫茶アズマのカップを描いた看板風の作例画像"
+    },
+    {
+      "slug": "nail-tips",
+      "category": "shop",
+      "title": "mellow tips",
+      "caption": "美容・ネイルチップのオンラインショップ",
+      "image": "sites/nail-tips/photos/mellow-editorial-hands.webp",
+      "width": 1400,
+      "height": 934,
+      "alt": "デニムの上に重ねたネイルチップを着けた両手"
+    },
+    {
       "slug": "factory-hvac",
       "category": "manufacturing",
       "title": "東嶺空調技研",
@@ -21,36 +71,6 @@
       "alt": "充填ラインを流れるボトル"
     },
     {
-      "slug": "restaurant",
-      "category": "restaurant",
-      "title": "街の食卓グループ",
-      "caption": "飲食・多店舗・ブログ",
-      "image": "assets/sample-previews/restaurant.png",
-      "width": 1200,
-      "height": 800,
-      "alt": "料理写真と店舗案内を掲載した街の食卓グループのページ"
-    },
-    {
-      "slug": "nail-tips",
-      "category": "shop",
-      "title": "mellow tips",
-      "caption": "美容・ネイルチップのオンラインショップ",
-      "image": "sites/nail-tips/photos/mellow-editorial-hands.webp",
-      "width": 1400,
-      "height": 934,
-      "alt": "デニムの上に重ねたネイルチップを着けた両手"
-    },
-    {
-      "slug": "asamado",
-      "category": "restaurant",
-      "title": "パン屋 あさまど",
-      "caption": "飲食・営業カレンダー・ブログ",
-      "image": "sites/asamado/photos/morning-dough.webp",
-      "width": 1440,
-      "height": 960,
-      "alt": "天板にクロワッサンの生地を並べる手元"
-    },
-    {
       "slug": "local-marche",
       "category": "event",
       "title": "まちの輪マルシェ",
@@ -59,26 +79,6 @@
       "width": 440,
       "height": 390,
       "alt": "木々のそばに並ぶマルシェのテント"
-    },
-    {
-      "slug": "524-line-stickers",
-      "category": "character",
-      "title": "524のスタンプと絵文字",
-      "caption": "キャラクター",
-      "image": "assets/sample-previews/524-line-stickers.png",
-      "width": 1200,
-      "height": 800,
-      "alt": "黄色いキャラクター524のスタンプと絵文字のページ"
-    },
-    {
-      "slug": "kissa-azuma",
-      "category": "restaurant",
-      "title": "喫茶アズマ",
-      "caption": "飲食・Instagramの実投稿を埋め込んだ作例",
-      "image": "assets/sample-previews/kissa-azuma.svg",
-      "width": 960,
-      "height": 640,
-      "alt": "喫茶アズマのカップを描いた看板風の作例画像"
     }
   ],
   "unlisted": []
