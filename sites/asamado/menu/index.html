@@ -39,9 +39,20 @@
   .menu-price{grid-column:2;grid-row:3;align-self:start;padding-top:0;font-size:.9rem}
 }
 .menu-note{color:#675748;margin-top:1.3rem;font-size:.78rem}
+
+.menu-taste{appearance:none;display:block;position:relative;grid-column:1;grid-row:1;align-self:center;min-width:0;width:100%;padding:0;border:0;border-radius:43% 48% 39% 45%;background:transparent;cursor:pointer}
+.menu-taste:focus-visible{outline:2px solid #79513a;outline-offset:4px}
+.menu-taste .menu-thumbnail{display:block}
+.menu-taste[data-bite] .menu-art{clip-path:url(#asamado-bite-cut)}
+.menu-taste[data-bite] .menu-drawing,.menu-taste[data-bite] .menu-thumbnail>img{clip-path:url(#asamado-bite-cut)}
+.menu-taste[data-bite]::after{content:"";pointer-events:none;position:absolute;width:2%;aspect-ratio:1;top:41%;left:77%;border-radius:40% 60% 53% 47%;background:#aa6735;box-shadow:.45em -.2em 0 -.02em #c89257,-.16em .65em 0 -.02em #b5773b;transform:rotate(-18deg)}
+.menu-se-credit{font-size:.72rem;color:#675748;margin-top:1rem}
+.menu-se-credit a{color:inherit;text-underline-offset:.2em}
+@media(max-width:560px){.menu-taste{grid-row:1 / 4}.menu-taste .menu-thumbnail{grid-row:auto}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><clipPath id="asamado-bite-cut" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.28H.88Q.80 .27 .80 .35Q.70 .34 .71 .43Q.60 .44 .64 .53Q.64 .61 .73 .60Q.75 .68 .83 .64Q.86 .72 .94 .68H1V1H0Z"/></clipPath></defs></svg>
 <header class="mast wrap"><a class="logo" href="../" aria-label="パン屋 あさまど トップ"><svg aria-hidden="true" viewBox="0 0 52 52" width="52" height="52"><g stroke="#a3542b" stroke-linecap="round" stroke-width="1.45"><circle cx="34" cy="18" r="6.3" fill="#edbe6a"/><path d="M34 7v2.4m0 17.2V29M23 18h2.3m17.4 0H45M26.2 10.3l1.7 1.7m12.2 12.2 1.7 1.7m0-15.6-1.7 1.7" fill="none"/></g><path d="M21.8 10.2C12.6 10.9 7.2 18 7.1 26.1c-.1 9.1 6.7 15.9 16 16.2 6.8.2 12-3.2 15-8.4-4.7 1.5-10 .8-14-2.5-5.6-4.6-7.1-12.2-2.3-21.2Z" fill="#dd9b55" stroke="#83482f" stroke-width="1.4" stroke-linejoin="round"/><g fill="none" stroke="#95552f" stroke-width="1.15" stroke-linecap="round"><path d="M11.3 16.9c2.1.8 4 1.4 6.6 2.3m-10.4 7.3c3.8-.5 7.4-1.5 10.5-2.7m-6.9 12.6c4.2-2.3 7.5-4.8 9.7-8m-1.6 13.3c2.1-2.9 4-5.8 5.2-9.4m4.3 9.5c.8-2.7 1.4-5.1 1.3-7.1"/></g></svg><span><small>パン屋</small>あさまど</span></a><nav aria-label="メインメニュー"><a href="../#bakes">焼き上がり</a><a href="./" aria-current="page">パン</a><a href="../#calendar">営業日</a><a href="../blog/">ブログ</a><a href="../#shop">店舗一覧</a></nav></header>
 <main class="wrap bread-menu">
 <a class="back" href="../#bread">‹ お店のページに戻る</a>
@@ -51,6 +62,7 @@
 </nav>
 <div id="menu-entries"></div>
 <p class="menu-note">価格は税込です。</p>
+<p class="menu-se-credit">効果音：<a href="https://otologic.jp/free/se/motion-eating01.html">OtoLogic「モーション 食べる02-1」</a>（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>、無音部分・音量を調整）</p>
 <noscript><p>おしながきはJavaScriptを有効にすると表示されます。</p></noscript>
 </main>
 <footer class="footer"><div class="wrap"><span class="footer-name">パン屋 あさまど</span><a href="../">お店のページへ</a></div></footer>
@@ -59,6 +71,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector("#menu-entries");
   const grouped = [["パン","menu-bread"],["サンド","menu-sandwich"],["焼き菓子","menu-sweets"]];
   const prices = new Intl.NumberFormat("ja-JP");
+  const biteAudio = new Audio("../audio/otologic-motion-eating02-1.mp3");
+  biteAudio.preload = "auto";
+  let activeTaste = null;
+  function tasteButton(product, illustration) {
+    const button = node("button","","menu-taste");
+    button.type = "button";
+    button.setAttribute("aria-label", product.name + "をひとくち");
+    button.setAttribute("aria-pressed", "false");
+    button.append(illustration);
+    button.addEventListener("pointerenter", event => {
+      if (event.pointerType === "mouse") button.setAttribute("data-bite", "");
+    });
+    button.addEventListener("pointerleave", () => {
+      if (activeTaste !== button) button.removeAttribute("data-bite");
+    });
+    button.addEventListener("click", () => {
+      const isReset = activeTaste === button;
+      if (activeTaste) {
+        activeTaste.setAttribute("aria-pressed", "false");
+        activeTaste.removeAttribute("data-bite");
+      }
+      activeTaste = isReset ? null : button;
+      if (isReset) return;
+      button.setAttribute("aria-pressed", "true");
+      button.setAttribute("data-bite", "");
+      try {
+        biteAudio.currentTime = 0;
+        biteAudio.play()?.catch(() => {});
+      } catch {}
+    });
+    return button;
+  }
+
   for (const [label,id] of grouped) {
     const products = breadCatalog.filter(p => p.category === label);
     if (!products.length) continue;
@@ -78,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         frame.append(art);
       } else frame.append(menuPhoto(p));
       const copy = node("div","","menu-copy"); copy.append(node("h3",p.name), node("p",p.description));
-      item.append(frame,copy,node("span",prices.format(p.price)+"円","menu-price"));
+      item.append(tasteButton(p,frame),copy,node("span",prices.format(p.price)+"円","menu-price"));
       list.append(item);
     }
     section.append(title,list);
