@@ -72,7 +72,7 @@
 <p class="menu-note">イラストを押すと、ひとくち。三口のあとにもう一度押すと元に戻ります。</p>
 <div id="menu-entries"></div>
 <p class="menu-note">価格は税込です。</p>
-<p class="menu-se-credit">効果音：<a href="https://otologic.jp/free/se/motion-eating01.html">OtoLogic「モーション 食べる02-1」</a>（<a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>、無音部分・音量を調整）</p>
+<p class="menu-se-credit">効果音：あさまど オリジナルSE</p>
 <noscript><p>おしながきはJavaScriptを有効にすると表示されます。</p></noscript>
 </main>
 <footer class="footer"><div class="wrap"><span class="footer-name">パン屋 あさまど</span><a href="../">お店のページへ</a></div></footer>
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector("#menu-entries");
   const grouped = [["パン","menu-bread"],["サンド","menu-sandwich"],["焼き菓子","menu-sweets"]];
   const prices = new Intl.NumberFormat("ja-JP");
-  const biteAudio = new Audio("../audio/otologic-motion-eating02-1.mp3");
+  const biteAudio = new Audio("../audio/croissant-crust-20261128.mp3");
   biteAudio.preload = "auto";
   function tasteButton(product, illustration) {
     const button = node("button","","menu-taste");
